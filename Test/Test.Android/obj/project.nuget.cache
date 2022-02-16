@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zLDnlkWNvLDqtYwSiep6s0f7IbJ/WuXqpK491QsqLH4kmtKmBNzas4fcNArRtB1ijM4VawZxabXgAAVfVPn4xg==",
+  "dgSpecHash": "M/GbInlbdRItsF2N9ZOnhdaVvhDhpSbPeG0rW8ejccgzLCNiU6SJz0/ew/VlBTzAJMiCa/H3p3vyZo9UjDriBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\Test.Android.csproj",
+  "projectFilePath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\Test.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asya\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",

@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Xiaomi Redmi Note 9 Pro</SelectedDevice>
     <ActiveDebugProfile>Xiaomi Redmi Note 9 Pro</ActiveDebugProfile>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <DefaultDevice>Nexus_5X_API_28</DefaultDevice>
   </PropertyGroup>
 </Project>

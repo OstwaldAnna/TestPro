@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\Test.Android.csproj": {}
+    "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\Test.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\Test.Android.csproj": {
+    "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\Test.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\Test.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\Test.Android.csproj",
         "projectName": "Test.Android",
-        "projectPath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\Test.Android.csproj",
+        "projectPath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\Test.Android.csproj",
         "packagesPath": "C:\\Users\\Asya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test.Android\\obj\\",
+        "outputPath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj": {
-                "projectPath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj"
+              "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj": {
+                "projectPath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj"
               }
             }
           }
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj": {
+    "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\Asya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\obj\\",
+        "outputPath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

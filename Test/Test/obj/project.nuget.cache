@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ajanmUBQSuQTahcRcvXhfh14pMLfOdbAPQPVDKQulyYtLbon9H38gHPq+2b6K4fpc+DYUCRcjyMvndNwKC8mg==",
+  "dgSpecHash": "p4Cs0SkTQw8ZqmchSVuJzqZ8Vw1FLq0ndXt+WHqLbruV6cPqmUN0QROEF/ek7WbjptIPx54IhPcRSCka3QeBfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asya\\Desktop\\Test\\Test\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\Asya\\Documents\\GitHub\\Mob\\Test\\Test\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asya\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Asya\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
