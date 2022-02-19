@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\TestProg\TestProg\bin\Debug\TestProg.exe.config
+C:\Users\Admin\Desktop\TestProg\TestProg\bin\Debug\TestProg.exe
+C:\Users\Admin\Desktop\TestProg\TestProg\bin\Debug\TestProg.pdb
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg_MarkupCompile.cache
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg_MarkupCompile.lref
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\MainWindow.baml
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.g.resources
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.Properties.Resources.resources
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.exe
+C:\Users\Admin\Desktop\TestProg\TestProg\obj\Debug\TestProg.pdb
