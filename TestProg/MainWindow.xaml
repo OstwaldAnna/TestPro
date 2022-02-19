@@ -5,30 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProg"
         mc:Ignorable="d"
-        Title="MainWindow" Height="401.351" Width="331.289">
+        Title="MainWindow" Height="600" Width="900">
     <Grid>
-        <StackPanel Orientation="Horizontal"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center">
-            <Button
-                Height="30" 
-                Width="90" 
-                Margin="10"
-                Content="Авторизация"/>
-            <Button
-               Height="30" 
-                Width="90" 
-                Margin="10" 
-                Content="Регистрация"/>
-        </StackPanel>
-        <Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" ></StackPanel>
-        <Button Height="30" 
-                Width="90" 
-                Content="Войти как гость" Margin="112,200,121,140"
-                Foreground="Aqua"
-                Background="Transparent"
-                BorderBrush="Transparent"/>
-        </Grid>
+       
+       
     </Grid>
 </Window>
