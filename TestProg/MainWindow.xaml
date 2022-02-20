@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProg"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
+        Title="TestProg" Height="900" Width="1600"
+        Icon="/Resurs/icons.ico">
     <Grid>
         <Frame
             Name="FrmMain"
+
             NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -135,7 +135,7 @@
                 Text="C#"
                 FontSize="36"
                 FontFamily="Montserrat"
-                Margin="10,0,10,0"/>
+                Margin="10,10,10,0"/>
             <StackPanel Orientation="Horizontal"
                         Height="186"
                         VerticalAlignment="Center">
@@ -222,7 +222,7 @@
                 Text="HTML"
                 FontSize="36"
                 FontFamily="Montserrat"
-                Margin="10,0,10,0"/>
+                Margin="10,10,10,0"/>
             <StackPanel Orientation="Horizontal"
                         Height="186"
                         VerticalAlignment="Center">
