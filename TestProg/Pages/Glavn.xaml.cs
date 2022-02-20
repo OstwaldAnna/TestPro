@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TestProg.Cl;
-using TestProg.Pages;
 
-namespace TestProg
+namespace TestProg.Pages
 {
-	/// <summary>
-	/// Логика взаимодействия для MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow() {
-			InitializeComponent();
-			DataHelper.frame = FrmMain;
-			FrmMain.Navigate(new Glavn());
-		}
-	}
+    /// <summary>
+    /// Логика взаимодействия для Glavn.xaml
+    /// </summary>
+    public partial class Glavn : Page
+    {
+        public Glavn()
+        {
+            InitializeComponent();
+        }
+    }
 }
