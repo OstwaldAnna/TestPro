@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Asya\Documents\GitHub\Mob\TestProg\App.xaml
-2-1549439127
+41474031903
 
-7-481912574
+9-345641485
 13-1505183044
-MainWindow.xaml;Pages\Glavn.xaml;
+MainWindow.xaml;Pages\AuthPage.xaml;Pages\GlavnWin.xaml;Pages\RegPage.xaml;
 
 False
 

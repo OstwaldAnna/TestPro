@@ -8,9 +8,6 @@
         Title="TestProg" Height="900" Width="1600"
         Icon="/Resurs/icons.ico">
     <Grid>
-        <Frame
-            Name="FrmMain"
-
-            NavigationUIVisibility="Hidden"/>
+        <Frame Name="FrmMain" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

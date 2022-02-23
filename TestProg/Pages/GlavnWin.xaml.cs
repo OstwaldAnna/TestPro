@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace TestProg.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Glavn.xaml
+    /// Логика взаимодействия для GlavnWin.xaml
     /// </summary>
-    public partial class Glavn : Page
+    public partial class GlavnWin : Window
     {
-        public Glavn()
+        public GlavnWin()
         {
             InitializeComponent();
         }

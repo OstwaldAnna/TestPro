@@ -1,17 +1,15 @@
-﻿<Page x:Class="TestProg.Pages.Glavn"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TestProg.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1600"
-      Title="Glavn">
-
+﻿<Window x:Class="TestProg.Pages.GlavnWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestProg.Pages"
+        mc:Ignorable="d"
+        Title="GlavnWin" Height="900" Width="1600">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="333*"/>
-            <ColumnDefinition Width="677*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="251*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="104*"/>
@@ -142,17 +140,17 @@
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center">
-                <Button Margin="15,5,15,0"
+                    <Button Margin="15,5,15,0"
                         Height="95"
                         Width="95"
                         Background="Transparent"
                         BorderBrush="Transparent">
-                    <StackPanel>
-                        <Image Source="/Resurs/1_Button.png"
+                        <StackPanel>
+                            <Image Source="/Resurs/1_Button.png"
                                Height="90"
                                Width="90"/>
-                    </StackPanel>
-                </Button>
+                        </StackPanel>
+                    </Button>
                     <TextBlock Text="Тест 1"
                                HorizontalAlignment="Center"
                                FontSize="18"
@@ -254,7 +252,7 @@
                         Background="Transparent"
                         BorderBrush="Transparent">
                         <StackPanel>
-                           <Image Source="/Resurs/HTML_2.png" 
+                            <Image Source="/Resurs/HTML_2.png" 
                                Height="99"
                                Width="126"/>
                         </StackPanel>
@@ -287,7 +285,6 @@
             <StackPanel Background="#3E4144" 
                         Height="4.41"/>
         </StackPanel>
-        
-        
+
     </Grid>
-</Page>
+</Window>
