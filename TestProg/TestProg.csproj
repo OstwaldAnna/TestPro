@@ -14,6 +14,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +37,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=2.0.4.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.4\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.3.0.3, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.3.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -108,10 +116,31 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resurs\Fonts\Montserrat-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Resurs\Fonts\Montserrat-VariableFont_wght.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Black.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-BlackItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Bold.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-BoldItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-ExtraBold.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-ExtraBoldItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-ExtraLight.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-ExtraLightItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Italic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Light.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-LightItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Medium.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-MediumItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Regular.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-SemiBold.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-SemiBoldItalic.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-Thin.ttf" />
+    <Resource Include="Resurs\Fonts\static\Montserrat-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -147,5 +176,16 @@
   <ItemGroup>
     <Resource Include="Resurs\Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\Fonts\OFL.txt" />
+    <Resource Include="Resurs\Fonts\README.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
 </Project>

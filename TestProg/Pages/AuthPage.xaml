@@ -5,28 +5,98 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestProg.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="960" d:DesignWidth="822"
-      Title="AuthPage">
+      d:DesignHeight="500" d:DesignWidth="400"
+      Title="AuthPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Grid>
-        <Image Source="/Resurs/fon.png" />
-        <Grid>
-            <Image Source="/Resurs/Logo.png" Height="199"
-                   Width="199" HorizontalAlignment="Center" Margin="315,71,308,690" RenderTransformOrigin="0.528,0.322"/>
-
+        <Image Source="/Resurs/fon.png" 
+               Height="500"
+               Width="400"/>
+        <Grid HorizontalAlignment="Center">
+            <Image Source="/Resurs/Logo.png"
+                   Width="99" 
+                   VerticalAlignment="Top" Margin="0,40,0,0"/>
         </Grid>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox Height="88" Width="492" Text="Введите логин" FontSize="36" VerticalAlignment="Center" Margin="15" />
-            <TextBox 
-                Height="88" 
-                Width="492" 
-                Text="Введите логин" 
-                FontSize="36" 
-                VerticalAlignment="Center"
-                Margin="10"/>
-            <Button Name="BtnAuth" Content="Войти" Click="BtnAuth_Click" Width="492" Height="88" Margin="10"/>
-            <Button Name="BtnReg" Content="Регистрация" Click="BtnReg_Click" Width="150" Height="20"/>
+
+
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Center" Margin="0,185,0,0">
+            <Border 
+                    Width="210"
+                    Height="35"
+                    CornerRadius="5"
+                    BorderThickness="3.5"
+                    Background="#087F72">
+                <TextBox 
+                     Width="200" 
+                     Text="Введите логин"
+                     FontSize="10"
+                     Foreground="#CCC2C2"
+                     BorderBrush="Transparent"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" />
+            </Border>
+           
+            <Border 
+                    Width="210"
+                    Height="35"
+                    CornerRadius="5"
+                    BorderThickness="3.5"
+                    Background="#087F72">
+                <TextBox 
+                     Width="200" 
+                     Text="Введите пароль"
+                     FontSize="10"
+                     Foreground="#CCC2C2"
+                     BorderBrush="Transparent"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center" />
+            </Border>
+            <!--<Border CornerRadius="10"
+                    Width="210"
+                    Height="40"
+                    BorderThickness="1"
+                    Margin="10">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF087F72" Offset="1"/>
+                        <GradientStop Color="#167896" Offset="0"/>
+                    </LinearGradientBrush>
+                </Border.Background>-->
+            <Button Name="BtnAuth" 
+                    Content="Вход" 
+                    Click="BtnAuth_Click" 
+                    Height="30" 
+                    Width="200"
+                    FontSize="15"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF087F72" Offset="1"/>
+                        <GradientStop Color="#167896" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!--</Border>-->
+            <Button Name="BtnReg" 
+                    Content="Регистрация" 
+                    Click="BtnReg_Click"    
+                    Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                    ToolTip="MaterialDesignFlatButton"
+                    Width="115"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    Foreground="#FF5E77F0">
+                <!--<Button.Triggers>
+                    <EventTrigger R"
+                </Button.Triggers>-->
+            </Button>
         </StackPanel>
-       
+
+
     </Grid>
 </Page>

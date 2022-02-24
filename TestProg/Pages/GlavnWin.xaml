@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProg.Pages"
         mc:Ignorable="d"
-        Title="GlavnWin" Height="900" Width="1600">
+        Title="GlavnWin" Height="800" Width="1200" 
+        FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
+        
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="251*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="104*"/>
-            <RowDefinition Height="240*"/>
-            <RowDefinition Height="599*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="242*"/>
+            <RowDefinition Height="552*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0"
                     Grid.Column="1"
@@ -24,8 +27,7 @@
                 Margin="30"
                 FontSize="30"
                 HorizontalAlignment="Center"
-                Foreground="White" 
-                FontFamily="Montserrat"/>
+                Foreground="White" />
         </StackPanel>
         <StackPanel Grid.RowSpan="2"
                     Grid.Column ="0"
@@ -132,7 +134,6 @@
             <TextBlock
                 Text="C#"
                 FontSize="36"
-                FontFamily="Montserrat"
                 Margin="10,10,10,0"/>
             <StackPanel Orientation="Horizontal"
                         Height="186"
@@ -153,8 +154,7 @@
                     </Button>
                     <TextBlock Text="Тест 1"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
@@ -172,8 +172,7 @@
                     </Button>
                     <TextBlock Text="Тест 2"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
@@ -191,8 +190,7 @@
                     </Button>
                     <TextBlock Text="Тест 3"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
@@ -210,8 +208,7 @@
                     </Button>
                     <TextBlock Text="Тест 4"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Background="#3E4144" 
@@ -219,7 +216,6 @@
             <TextBlock
                 Text="HTML"
                 FontSize="36"
-                FontFamily="Montserrat"
                 Margin="10,10,10,0"/>
             <StackPanel Orientation="Horizontal"
                         Height="186"
@@ -240,8 +236,7 @@
                     </Button>
                     <TextBlock Text="Тест 1"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
@@ -259,8 +254,7 @@
                     </Button>
                     <TextBlock Text="Тест 2"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical"
                             VerticalAlignment="Center"
@@ -278,8 +272,7 @@
                     </Button>
                     <TextBlock Text="Тест 3"
                                HorizontalAlignment="Center"
-                               FontSize="18"
-                               FontFamily="Montserrat"/>
+                               FontSize="18"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Background="#3E4144" 

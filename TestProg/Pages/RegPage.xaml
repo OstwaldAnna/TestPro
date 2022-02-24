@@ -5,10 +5,74 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestProg.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="400"
       Title="RegPage">
 
     <Grid>
-        <TextBlock Text="Ура тут решистрация"/>
+        <Image Source="/Resurs/fon.png" />
+        <Grid HorizontalAlignment="Center">
+            <Image Source="/Resurs/Logo.png"
+                   Width="99"  
+                   VerticalAlignment="Top" />
+        </Grid>
+        <StackPanel Orientation="Vertical" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" >
+            <TextBlock
+               Text="Придумайте логин"
+                FontSize="20"/>
+            <TextBox Height="30" 
+                     Width="375" 
+                     FontSize="16"
+                     Margin="15" 
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"/>
+            <TextBlock
+               Text="Придумайте пароль"
+                FontSize="20"/>
+            <TextBox 
+                Height="30" 
+                Width="375" 
+                FontSize="16" 
+                VerticalAlignment="Center"
+                Margin="15"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"/>
+            <Button Content="Регистрация"  
+                    Height="35" 
+                    Width="200"
+                    FontSize="20"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF087F72" Offset="1"/>
+                        <GradientStop Color="#167896" Offset="0"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <!--<Button Name="BtnReg" 
+                    Content="Уже есть аккаунт, войти" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Foreground="#FF5D77F0"
+                    FontSize="24" Height="46"/>-->
+            <Button  
+                    Content="Уже есть аккаунт, войти"    
+                    Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                    ToolTip="MaterialDesignFlatButton"
+                    Width="200"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    Foreground="#FF5E77F0">
+                <!--<Button.Triggers>
+                    <EventTrigger R"
+                </Button.Triggers>-->
+            </Button>
+        </StackPanel>
+
+
     </Grid>
 </Page>
