@@ -20,30 +20,35 @@
 
         <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 
-                    VerticalAlignment="Center" Height="210" Margin="102,205,102,85" >
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="5"/>
-            <TextBox Margin="10"
-                Width="150"
-  x:Name="NameTextBox"
-  materialDesign:HintAssist.Hint="Name"
-  materialDesign:HintAssist.HelperText="Helper text longer than error">
-                <TextBox.Text>
-                    <Binding
-      Path="Name"
-      UpdateSourceTrigger="PropertyChanged">
-                        
-                    </Binding>
-                </TextBox.Text>
-            </TextBox>
+                    VerticalAlignment="Center" 
+                    Height="210">
+            <StackPanel Orientation="Horizontal" 
+                        Height="50" 
+                        Width="198">
+                <materialDesign:PackIcon Kind="Account" 
+                                         VerticalAlignment="Center" 
+                                         Margin="5"/>
+                <TextBox 
+                    Width="167" 
+                    Margin="0,5,0,20"
+                    x:Name="NameTextBox"
+                    materialDesign:HintAssist.Hint="Name"
+                    materialDesign:HintAssist.HelperText="Helper text longer than error" 
+                    Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <StackPanel  Orientation="Horizontal" >
-                <materialDesign:PackIcon Kind="KeyVariant"  VerticalAlignment="Center" Margin="5"/>
-                <PasswordBox Margin="10" 
-  x:Name="PasswordBox"
-  materialDesign:HintAssist.Hint="Password"
-  materialDesign:TextFieldAssist.HasClearButton="True"
-  materialDesign:HintAssist.HelperText="At least 8 characters" Width="150" />
+            <StackPanel  Orientation="Horizontal" 
+                         Height="50" 
+                         Width="198" >
+                <materialDesign:PackIcon Kind="KeyVariant"  
+                                         VerticalAlignment="Center" 
+                                         Margin="5"/>
+                <PasswordBox  
+                    x:Name="PasswordBox"
+                    materialDesign:HintAssist.Hint="Password"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:HintAssist.HelperText="At least 8 characters" 
+                    Width="167" 
+                    Margin="0,5,0,20"  />
             </StackPanel>
             <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 
@@ -78,8 +83,9 @@
                      BorderBrush="Transparent"
                      HorizontalContentAlignment="Center"
                      VerticalContentAlignment="Center" />
-            </Border>
-            --><!--<Border CornerRadius="10"
+            </Border>-->
+            
+            <!--<Border CornerRadius="10"
                     Width="210"
                     Height="40"
                     BorderThickness="1"
@@ -89,8 +95,8 @@
                         <GradientStop Color="#FF087F72" Offset="1"/>
                         <GradientStop Color="#167896" Offset="0"/>
                     </LinearGradientBrush>
-                </Border.Background>--><!--
-            <Button Name="BtnAuth" 
+                </Border.Background>-->
+                <Button Name="BtnAuth" 
                     Content="Вход" 
                     Click="BtnAuth_Click" 
                     Height="30" 
@@ -107,7 +113,9 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            --><!--</Border>--><!--
+            
+            <!--</Border>-->
+            
             <Button Name="BtnReg" 
                     Content="Регистрация" 
                     Click="BtnReg_Click"    
@@ -117,10 +125,12 @@
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                     Foreground="#FF5E77F0">
-                --><!--<Button.Triggers>
+                
+            <!--<Button.Triggers>
                     <EventTrigger R"
-                </Button.Triggers>--><!--
-            </Button>-->
+                </Button.Triggers>-->
+            
+            </Button>
         </StackPanel>
 
 
