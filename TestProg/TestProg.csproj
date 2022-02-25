@@ -180,6 +180,24 @@
     <Resource Include="Resurs\Fonts\OFL.txt" />
     <Resource Include="Resurs\Fonts\README.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\fff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\5820_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\lol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\lol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\lol-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\kj.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.3.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

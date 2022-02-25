@@ -9,9 +9,9 @@
       Title="RegPage">
 
     <Grid>
-        <Image Source="/Resurs/fon.png" />
+        <Image Source="/TestProg;component/Resurs/fff.jpg" Stretch="Fill" />
         <Grid HorizontalAlignment="Center">
-            <Image Source="/Resurs/Logo.png"
+            <Image Source="/TestProg;component/Resurs/kj.png"
                    Width="99"  
                    VerticalAlignment="Top" />
         </Grid>
