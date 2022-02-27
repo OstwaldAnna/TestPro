@@ -168,13 +168,7 @@
     <Resource Include="Resurs\HTML_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resurs\icons.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resurs\fon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resurs\Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resurs\Fonts\OFL.txt" />
@@ -193,7 +187,10 @@
     <Resource Include="Resurs\lol.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resurs\lol-removebg-preview.png" />
+    <Resource Include="Resurs\Group-8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurs\Group 8.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resurs\kj.png" />

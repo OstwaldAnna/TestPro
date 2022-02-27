@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TestProg"
         mc:Ignorable="d"
         Title="TestProg" Height="500" Width="400"
-        Icon="/Resurs/icons.ico" 
+        Icon="/Resurs/Group-8.ico"
         FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">

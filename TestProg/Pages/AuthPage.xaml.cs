@@ -31,10 +31,17 @@ namespace TestProg.Pages
 
             GlavnWin win = new GlavnWin();
             win.Show();
+            //MessageBox.Show("Вы вошли");
             //MainWindow winn = new MainWindow();
             //winn.Hide();
-            MessageBox.Show("Вы вошли");
+
+            //AuthPage winn = new AuthPage();
+            //winn.Hide();
+
+
         }
+
+       
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {

@@ -5,279 +5,151 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProg.Pages"
         mc:Ignorable="d"
-        Title="GlavnWin" Height="800" Width="1200" 
+        Title="GlavnWin" Height="600" Width="800" 
         FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
-        
-        >
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="/Resurs/Group-8.ico" >
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="251*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
+        </Grid.Background>
+   
+
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="242*"/>
-            <RowDefinition Height="552*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="709*"/>
+            
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0"
-                    Grid.Column="1"
-                    Background="#087F72">
-            <TextBlock
-                Text="TEST"
-                Margin="30"
-                FontSize="30"
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="324*"/>
+            <ColumnDefinition Width="967*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <TextBlock 
                 HorizontalAlignment="Center"
-                Foreground="White" />
-        </StackPanel>
-        <StackPanel Grid.RowSpan="2"
-                    Grid.Column ="0"
-                    Background="#262D2F"/>
-        <StackPanel Grid.Row="2"
-                    Grid.Column="0"
-                    Background="#212528"
-                    Orientation="Vertical">
-            <Button FontSize="18"
-                    Background="Transparent"
-                    Height="61"               
-                    BorderBrush="#3E4144"
-                    HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurs/home.png"                    
-                           Height="35.55"
-                           Width="35"
-                           Margin="10"/>
-
-                    <TextBlock Text="Главная"
-                               Foreground="#087F72"
-                               FontFamily="Montserrat"
-                               VerticalAlignment="Center"/>
-
-                </StackPanel>
-            </Button>
-            <Button FontSize="18"
-                    Background="Transparent"
-                    Height="61"
-                    BorderBrush="#3E4144"
-                    HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurs/Hel.png" 
-                           Height="35.55"
-                           Width="35"
-                           Margin="10"/>
-
-                    <TextBlock Text="Профиль"
-                               Foreground="#087F72"
-                               FontFamily="Montserrat"
-                               VerticalAlignment="Center"/>
-                </StackPanel>
-            </Button>
-            <Button FontSize="18"
-                    Background="Transparent"
-                    Height="61"
-                    BorderBrush="#3E4144"
-                    HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurs/Group.png" 
-                           Height="35.55"
-                           Width="35"
-                           Margin="10"/>
-
-                    <TextBlock Text="Помощь"
-                               Foreground="#087F72"
-                               FontFamily="Montserrat"
-                               VerticalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-            </Button>
-            <Button FontSize="18"
-                    Background="Transparent"
-                    Height="61"
-                    BorderBrush="#3E4144"
-                    HorizontalContentAlignment="Left">
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Resurs/Contact.png"
-                           Height="35.55"
-                           Width="35"
-                           Margin="10"/>
-
-                    <TextBlock Text="Контакты"
-                               Foreground="#087F72"
-                               FontFamily="Montserrat"
-                               VerticalAlignment="Center"
-                               FontSize="18"/>
-
-                </StackPanel>
-            </Button>
-        </StackPanel>
-
-        <Grid
-             Grid.RowSpan ="2"
-            Grid.Row="0">
-            <StackPanel Orientation="Vertical" 
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center">
-                <Image Source="/Resurs/ava.png" 
-                   Width="116"
-                   Height="116"
-                       Margin="10"/>
-                <TextBlock Text="Anna Demenko"
-                           FontSize="20"
-                           FontFamily="Montserrat"
-                           Foreground="#087F72"
-                           FontWeight="Bold"/>
-            </StackPanel>
+                VerticalAlignment="Center"
+                FontSize="16"
+                Text="Menu"
+                FontWeight="Bold" />
+            <Border BorderThickness="1"
+                    BorderBrush="Black"/>
 
         </Grid>
-        <StackPanel Grid.Column="1"
-                    Grid.RowSpan="2"
-                    Grid.Row="1">
-            <TextBlock
-                Text="C#"
-                FontSize="36"
-                Margin="10,10,10,0"/>
-            <StackPanel Orientation="Horizontal"
-                        Height="186"
-                        VerticalAlignment="Center">
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="15,5,15,0"
-                        Height="95"
-                        Width="95"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/1_Button.png"
-                               Height="90"
-                               Width="90"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 1"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="10,2,10,0"
-                        Height="99"
-                        Width="129"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/2_Button.png" 
-                               Height="99"
-                               Width="126"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 2"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="15,5,15,0"
-                        Height="95"
-                        Width="95"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/3_Button.png" 
-                               Height="90"
-                               Width="90"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 3"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="15,5,15,0"
-                        Height="95"
-                        Width="95"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/4_Button.png" 
-                               Height="90"
-                               Width="90"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 4"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
+        
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+            <Border BorderThickness="0.5"
+                    BorderBrush="Black"/>
+            <StackPanel>
+                <Button 
+                    Content="Home" 
+                    FontWeight="Bold"
+                    Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                    ToolTip="MaterialDesignFlatButton"
+                    FontSize="15"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    Foreground="Black"
+                   HorizontalContentAlignment="Left">
+                </Button>
+                <Expander  
+                    Foreground="Black"
+                    FontWeight="Bold"
+                    Header="Tests">
+                    
+                    <Expander.Background>
+                        <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
+                    </Expander.Background>
+                    <StackPanel
+                        Orientation="Vertical"
+                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                        Margin="24,8,24,16">
+                        <Button  Content="C#" 
+                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                 ToolTip="MaterialDesignFlatButton"
+                                 FontSize="15"
+                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                 Foreground="Black"
+                                 HorizontalContentAlignment="Left"/>
+
+                        <Button  Content="Python" 
+                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                 ToolTip="MaterialDesignFlatButton"
+                                 FontSize="15"
+                                 HorizontalContentAlignment="Left"
+                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                 Foreground="Black" />
+
+                        <Button  Content="JavaScript" 
+                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                 ToolTip="MaterialDesignFlatButton"
+                                 FontSize="15"
+                                 HorizontalContentAlignment="Left"
+                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                 Foreground="Black" />
+                    </StackPanel>
+                </Expander>
+                <Expander
+                    HorizontalAlignment="Stretch"
+                    Header="Profile"
+                    Foreground="Black"
+                    FontWeight="Bold">
+                    <Expander.Background>
+                        <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
+                    </Expander.Background>
+                    <StackPanel
+                        Orientation="Vertical"
+                        TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                        Margin="24,8,24,16">
+                        <Button  Content="Edit profile" 
+                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                 ToolTip="MaterialDesignFlatButton"
+                                 FontSize="15"
+                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                 Foreground="Black"
+                                 HorizontalContentAlignment="Left">
+                        </Button>
+                        <Button  Content="Change account" 
+                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                 ToolTip="MaterialDesignFlatButton"
+                                 FontSize="15"
+                                 HorizontalContentAlignment="Left"
+                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                 Foreground="Black" />
+                    </StackPanel>
+                </Expander>
+                <Button 
+                    Content="Rating" 
+                    FontWeight="Bold"
+                    Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                    ToolTip="MaterialDesignFlatButton"
+                    FontSize="15"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                    RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    Foreground="Black"
+                    HorizontalContentAlignment="Left">
+                </Button>
             </StackPanel>
-            <StackPanel Background="#3E4144" 
-                        Height="4.41"/>
+        </Grid>
+        <Grid Grid.Row="0"
+              Grid.Column="1">
+            <Border BorderThickness="1"
+                    BorderBrush="Black"/>
             <TextBlock
-                Text="HTML"
-                FontSize="36"
-                Margin="10,10,10,0"/>
-            <StackPanel Orientation="Horizontal"
-                        Height="186"
-                        VerticalAlignment="Center">
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="15,5,15,0"
-                        Height="95"
-                        Width="95"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/HTML_1.png" 
-                               Height="90"
-                               Width="90"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 1"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="10,2,10,0"
-                        Height="99"
-                        Width="129"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/HTML_2.png" 
-                               Height="99"
-                               Width="126"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 2"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-                <StackPanel Orientation="Vertical"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center">
-                    <Button Margin="15,5,15,0"
-                        Height="95"
-                        Width="95"
-                        Background="Transparent"
-                        BorderBrush="Transparent">
-                        <StackPanel>
-                            <Image Source="/Resurs/HTML_3.png"
-                               Height="90"
-                               Width="90"/>
-                        </StackPanel>
-                    </Button>
-                    <TextBlock Text="Тест 3"
-                               HorizontalAlignment="Center"
-                               FontSize="18"/>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Background="#3E4144" 
-                        Height="4.41"/>
-        </StackPanel>
+                Text="TestPro"
+                FontSize="16"
+                FontWeight="Bold"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="10,10,50,10"/>
+        </Grid>
 
     </Grid>
 </Window>

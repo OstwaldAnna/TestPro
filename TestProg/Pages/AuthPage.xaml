@@ -12,12 +12,11 @@
     <Grid>
         <Image Source="/Resurs/fff.jpg" Stretch="Fill" />
         <Grid HorizontalAlignment="Center">
-            <Image Source="/TestProg;component/Resurs/kj.png"
-                   Width="99" 
-                   VerticalAlignment="Top" Margin="0,40,0,0"/>
+            <Image Source="/Resurs/Group 8.png" 
+                   Width="119" 
+                   Height="119"
+                   VerticalAlignment="Top"/>
         </Grid>
-
-
         <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center" 
@@ -32,8 +31,8 @@
                     Width="167" 
                     Margin="0,5,0,20"
                     x:Name="NameTextBox"
-                    materialDesign:HintAssist.Hint="Name"
-                    materialDesign:HintAssist.HelperText="Helper text longer than error" 
+                    materialDesign:HintAssist.Hint="Login"
+                    materialDesign:HintAssist.HelperText="Введите логин" 
                     Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <StackPanel  Orientation="Horizontal" 
@@ -46,12 +45,11 @@
                     x:Name="PasswordBox"
                     materialDesign:HintAssist.Hint="Password"
                     materialDesign:TextFieldAssist.HasClearButton="True"
-                    materialDesign:HintAssist.HelperText="At least 8 characters" 
+                    materialDesign:HintAssist.HelperText="Введите пароль" 
                     Width="167" 
                     Margin="0,5,0,20"  />
             </StackPanel>
-            <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                
+            <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center">    
             <materialDesign:PackIcon Kind="Account" Height="35" Width="19" />
             <Border 
                     Width="210"
@@ -84,7 +82,6 @@
                      HorizontalContentAlignment="Center"
                      VerticalContentAlignment="Center" />
             </Border>-->
-            
             <!--<Border CornerRadius="10"
                     Width="210"
                     Height="40"
@@ -96,40 +93,36 @@
                         <GradientStop Color="#167896" Offset="0"/>
                     </LinearGradientBrush>
                 </Border.Background>-->
-                <Button Name="BtnAuth" 
-                    Content="Вход" 
+            <Button Name="BtnAuth" 
+                    Content="Авторизоваться" 
                     Click="BtnAuth_Click" 
-                    Height="30" 
-                    Width="200"
-                    FontSize="15"
-                    Foreground="White"
-                    BorderBrush="Transparent"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF087F72" Offset="1"/>
-                        <GradientStop Color="#167896" Offset="0"/>
-                    </LinearGradientBrush>
-                </Button.Background>
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Background="Transparent"
+                    BorderBrush="Black"
+                    Foreground="Black"
+                    Width="175"
+                    Height="32"
+                    materialDesign:ButtonAssist.CornerRadius="15"
+                    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Margin="0,10,0,0">
             </Button>
-            
             <!--</Border>-->
-            
+
             <Button Name="BtnReg" 
-                    Content="Регистрация" 
-                    Click="BtnReg_Click"    
+                    Content="Нет аккаунта? Зарегистрируйтесь" 
+                    Click="BtnReg_Click" 
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                     ToolTip="MaterialDesignFlatButton"
-                    Width="115"
+                    FontSize="10"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                    Foreground="#FF5E77F0">
-                
-            <!--<Button.Triggers>
+                    Foreground="#565555" Height="23" Width="194">
+
+                <!--<Button.Triggers>
                     <EventTrigger R"
                 </Button.Triggers>-->
-            
             </Button>
         </StackPanel>
 
