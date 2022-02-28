@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="proektBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AnswerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankQuesions" Relationship="Self.FK_BankQuesions_Answer" FromRole="Answer" ToRole="BankQuesions" />
+  </EntityType>
+  <EntityType Name="BankQuesions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idQuesion" Type="Int32" Nullable="false" />
+    <Property Name="idAnswer" Type="Int32" Nullable="false" />
+    <Property Name="Variants" Type="Boolean" Nullable="false" />
+    <Property Name="idCategory" Type="Int32" Nullable="false" />
+    <Property Name="idTheme" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Answer" Relationship="Self.FK_BankQuesions_Answer" FromRole="BankQuesions" ToRole="Answer" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_BankQuesions_Category" FromRole="BankQuesions" ToRole="Category" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_BankQuesions_Question" FromRole="BankQuesions" ToRole="Question" />
+    <NavigationProperty Name="Theme" Relationship="Self.FK_BankQuesions_Theme" FromRole="BankQuesions" ToRole="Theme" />
+    <NavigationProperty Name="Result" Relationship="Self.FK_Result_BankQuesions" FromRole="BankQuesions" ToRole="Result" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankQuesions" Relationship="Self.FK_BankQuesions_Category" FromRole="Category" ToRole="BankQuesions" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QuestionName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankQuesions" Relationship="Self.FK_BankQuesions_Question" FromRole="Question" ToRole="BankQuesions" />
+  </EntityType>
+  <EntityType Name="Result">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idUser" Type="Int32" Nullable="false" />
+    <Property Name="idBankQuestions" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BankQuesions" Relationship="Self.FK_Result_BankQuesions" FromRole="Result" ToRole="BankQuesions" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Result_User" FromRole="Result" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Theme">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThemeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="BankQuesions" Relationship="Self.FK_BankQuesions_Theme" FromRole="Theme" ToRole="BankQuesions" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Result" Relationship="Self.FK_Result_User" FromRole="User" ToRole="Result" />
+  </EntityType>
+  <Association Name="FK_BankQuesions_Answer">
+    <End Role="Answer" Type="Self.Answer" Multiplicity="1" />
+    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Answer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BankQuesions">
+        <PropertyRef Name="idAnswer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankQuesions_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BankQuesions">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankQuesions_Question">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BankQuesions">
+        <PropertyRef Name="idQuesion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BankQuesions_Theme">
+    <End Role="Theme" Type="Self.Theme" Multiplicity="1" />
+    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Theme">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BankQuesions">
+        <PropertyRef Name="idTheme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_BankQuesions">
+    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankQuesions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="idBankQuestions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Result" Type="Self.Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="proektBDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answer" EntityType="Self.Answer" />
+    <EntitySet Name="BankQuesions" EntityType="Self.BankQuesions" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Question" EntityType="Self.Question" />
+    <EntitySet Name="Result" EntityType="Self.Result" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Theme" EntityType="Self.Theme" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_BankQuesions_Answer" Association="Self.FK_BankQuesions_Answer">
+      <End Role="Answer" EntitySet="Answer" />
+      <End Role="BankQuesions" EntitySet="BankQuesions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankQuesions_Category" Association="Self.FK_BankQuesions_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="BankQuesions" EntitySet="BankQuesions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankQuesions_Question" Association="Self.FK_BankQuesions_Question">
+      <End Role="Question" EntitySet="Question" />
+      <End Role="BankQuesions" EntitySet="BankQuesions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BankQuesions_Theme" Association="Self.FK_BankQuesions_Theme">
+      <End Role="Theme" EntitySet="Theme" />
+      <End Role="BankQuesions" EntitySet="BankQuesions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_BankQuesions" Association="Self.FK_Result_BankQuesions">
+      <End Role="BankQuesions" EntitySet="BankQuesions" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_User" Association="Self.FK_Result_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

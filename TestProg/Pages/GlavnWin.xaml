@@ -13,62 +13,68 @@
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
-   
+
 
 
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="709*"/>
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="324*"/>
             <ColumnDefinition Width="967*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0"
-              Grid.Column="0">
+              Grid.Column="0" Background="#26000000">
             <TextBlock 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="16"
                 Text="Menu"
                 FontWeight="Bold" />
-            <Border BorderThickness="1"
-                    BorderBrush="Black"/>
+            <!--<Border BorderThickness="1"
+                    BorderBrush="Black"/>-->
 
         </Grid>
-        
+
         <Grid Grid.Row="1"
-              Grid.Column="0">
-            <Border BorderThickness="0.5"
-                    BorderBrush="Black"/>
-            <StackPanel>
+              Grid.Column="0" Background="#26000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="124*"/>
+            </Grid.ColumnDefinitions>
+            <!--<Border BorderThickness="0.5"
+                    BorderBrush="Black" Grid.ColumnSpan="2"/>-->
+            <StackPanel Grid.ColumnSpan="2">
                 <Button 
                     Content="Home" 
                     FontWeight="Bold"
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                    ToolTip="MaterialDesignFlatButton"
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                     Foreground="Black"
-                   HorizontalContentAlignment="Left">
+                   HorizontalContentAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-2.106"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.588"/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
                 </Button>
                 <Expander  
                     Foreground="Black"
                     FontWeight="Bold"
-                    Header="Tests">
-                    
-                    <Expander.Background>
-                        <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
-                    </Expander.Background>
+                    Header="Tests" Background="#02000000">
                     <StackPanel
                         Orientation="Vertical"
                         TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                         Margin="24,8,24,16">
                         <Button  Content="C#" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 ToolTip="MaterialDesignFlatButton"
                                  FontSize="15"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
                             RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
@@ -77,7 +83,6 @@
 
                         <Button  Content="Python" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 ToolTip="MaterialDesignFlatButton"
                                  FontSize="15"
                                  HorizontalContentAlignment="Left"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
@@ -86,7 +91,6 @@
 
                         <Button  Content="JavaScript" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 ToolTip="MaterialDesignFlatButton"
                                  FontSize="15"
                                  HorizontalContentAlignment="Left"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
@@ -98,17 +102,13 @@
                     HorizontalAlignment="Stretch"
                     Header="Profile"
                     Foreground="Black"
-                    FontWeight="Bold">
-                    <Expander.Background>
-                        <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
-                    </Expander.Background>
+                    FontWeight="Bold" Background="#02000000">
                     <StackPanel
                         Orientation="Vertical"
                         TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                         Margin="24,8,24,16">
                         <Button  Content="Edit profile" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 ToolTip="MaterialDesignFlatButton"
                                  FontSize="15"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
                             RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
@@ -117,7 +117,6 @@
                         </Button>
                         <Button  Content="Change account" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 ToolTip="MaterialDesignFlatButton"
                                  FontSize="15"
                                  HorizontalContentAlignment="Left"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
@@ -129,7 +128,6 @@
                     Content="Rating" 
                     FontWeight="Bold"
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                    ToolTip="MaterialDesignFlatButton"
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
@@ -139,9 +137,9 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="0"
-              Grid.Column="1">
-            <Border BorderThickness="1"
-                    BorderBrush="Black"/>
+              Grid.Column="1" Background="#26000000">
+            <!--<Border BorderThickness="1"
+                    BorderBrush="Black"/>-->
             <TextBlock
                 Text="TestPro"
                 FontSize="16"

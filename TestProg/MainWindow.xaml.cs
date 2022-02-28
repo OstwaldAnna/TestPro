@@ -27,7 +27,9 @@ namespace TestProg
             InitializeComponent();
             DataHelper.frame = FrmMain;
             DataHelper.frame.Navigate(new AuthPage());
+            ODBClass.entities = new Bd.proektBDEntities();
         }
+       
 
        
     }

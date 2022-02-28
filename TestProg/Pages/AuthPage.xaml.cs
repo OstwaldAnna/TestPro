@@ -28,24 +28,40 @@ namespace TestProg.Pages
 
         private void BtnAuth_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                var user = ODBClass.entities.User.FirstOrDefault(x => x.Login == NameTextBox.Text && x.Password == PasswordBox.Password);
+                if (user != null)
+                {
+                    GlavnWin win = new GlavnWin();
+                    win.Show();
+                    
+                }
+                else { MessageBox.Show("Вы сдохли"); }
 
-            GlavnWin win = new GlavnWin();
-            win.Show();
-            //MessageBox.Show("Вы вошли");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Вы сдохли");
+            }
             //MainWindow winn = new MainWindow();
             //winn.Hide();
 
             //AuthPage winn = new AuthPage();
             //winn.Hide();
 
-
         }
 
-       
+
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
             DataHelper.frame.Navigate(new RegPage());
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

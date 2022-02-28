@@ -103,7 +103,6 @@
                     Width="175"
                     Height="32"
                     materialDesign:ButtonAssist.CornerRadius="15"
-                    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Margin="0,10,0,0">
@@ -114,14 +113,14 @@
                     Content="Нет аккаунта? Зарегистрируйтесь" 
                     Click="BtnReg_Click" 
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                    ToolTip="MaterialDesignFlatButton"
                     FontSize="10"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                     Foreground="#565555" Height="23" Width="194">
-
                 <!--<Button.Triggers>
-                    <EventTrigger R"
+                    <Trigger Property="MouseEnter" Value="True">
+                        
+                    </Trigger>
                 </Button.Triggers>-->
             </Button>
         </StackPanel>
