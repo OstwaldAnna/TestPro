@@ -162,3 +162,11 @@ E:\Mob\TestProg\obj\Debug\TestProg.exe
 E:\Mob\TestProg\obj\Debug\TestProg.pdb
 E:\Mob\TestProg\obj\Debug\Pages\QestionsPage.g.cs
 E:\Mob\TestProg\obj\Debug\Pages\QestionsPage.baml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.dll
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.xml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QestionsPage.g.cs
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\TestProg_Content.g.cs
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QestionsPage.baml

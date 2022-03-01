@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\Mob\TestProg\obj\Debug\
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\
 TestProg
 none
 false
 DEBUG;TRACE
-E:\Mob\TestProg\App.xaml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\App.xaml
 51278725299
 21800425316
 22537319921
-201174000929
+20-880840598
 MainWindow.xaml;Pages\AuthPage.xaml;Pages\GlavnWin.xaml;Pages\QestionsPage.xaml;Pages\RegPage.xaml;
 
 False
