@@ -148,6 +148,10 @@
                 HorizontalAlignment="Right"
                 Margin="10,10,50,10"/>
         </Grid>
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Frame Name="FrmQuestions" NavigationUIVisibility="Hidden"/>
 
+        </Grid>
     </Grid>
 </Window>

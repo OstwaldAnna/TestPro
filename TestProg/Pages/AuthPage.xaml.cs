@@ -37,12 +37,12 @@ namespace TestProg.Pages
                     win.Show();
                     
                 }
-                else { MessageBox.Show("Вы сдохли"); }
+                else { MessageBox.Show("Что-то пошло не так. Повторите попытку."); }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Вы сдохли");
+                MessageBox.Show("Что-то пошло не так. Повторите попытку.");
             }
             //MainWindow winn = new MainWindow();
             //winn.Hide();

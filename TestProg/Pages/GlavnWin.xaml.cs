@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestProg.Cl;
 
 namespace TestProg.Pages
 {
@@ -22,6 +23,8 @@ namespace TestProg.Pages
         public GlavnWin()
         {
             InitializeComponent();
+            DataHelper.frameQuest = FrmQuestions;
+            DataHelper.frameQuest.Navigate(new QestionsPage());
         }
     }
 }

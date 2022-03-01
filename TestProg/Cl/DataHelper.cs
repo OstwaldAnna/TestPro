@@ -9,6 +9,7 @@ namespace TestProg.Cl
 {
     public class DataHelper
     {
+        public static Frame frameQuest;
         public static Frame frame;
     }
 }
