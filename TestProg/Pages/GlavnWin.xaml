@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProg.Pages"
         mc:Ignorable="d"
-        Title="GlavnWin" Height="600" Width="800" 
+        Title="TestPro" Height="600" Width="800" 
         FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Icon="/Resurs/Group-8.ico" >
@@ -22,7 +22,7 @@
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="324*"/>
+            <ColumnDefinition Width="330*"/>
             <ColumnDefinition Width="967*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0"
@@ -140,13 +140,19 @@
               Grid.Column="1" Background="#26000000">
             <!--<Border BorderThickness="1"
                     BorderBrush="Black"/>-->
-            <TextBlock
-                Text="TestPro"
-                FontSize="16"
-                FontWeight="Bold"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Right"
-                Margin="10,10,50,10"/>
+            <Button  Content="Закончить попытку" 
+                     Name="BtnEnd"
+                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                     FontSize="15"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     IsEnabled="{Binding DataContext.ControlsEnabled, 
+                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                     Foreground="Black"
+                     FontWeight="Bold"
+                     Margin="10"
+                     Height="30"/>
+
         </Grid>
         <Grid Grid.Row="1"
               Grid.Column="1">

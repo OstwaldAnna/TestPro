@@ -112,10 +112,9 @@
             <Button Name="BtnReg" 
                     Content="Нет аккаунта? Зарегистрируйтесь" 
                     Click="BtnReg_Click" 
-                    Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                    Background="Transparent"
                     FontSize="10"
-                    IsEnabled="{Binding DataContext.ControlsEnabled, 
-                    RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                    BorderBrush="Transparent"
                     Foreground="#565555" Height="23" Width="194">
                 <!--<Button.Triggers>
                     <Trigger Property="MouseEnter" Value="True">

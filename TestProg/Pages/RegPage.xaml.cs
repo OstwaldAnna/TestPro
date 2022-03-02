@@ -29,19 +29,37 @@ namespace TestProg.Pages
 
         private void BtnAuth_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User()
+            try
             {
-                Login = (string)NameTextBox.SelectedText,
-                Password = (string)PasswordBox.Password,
-            };
-            ODBClass.entities.User.Add(user);
-            ODBClass.entities.SaveChanges();
-            MessageBox.Show("Поздравляю с успешной регистрацией");
-            GlavnWin win = new GlavnWin();
-            win.Show();
+                if (NameTextBox.Text != "" && PasswordBox.Password != "")
+                {
+                    if (ODBClass.entities.User.FirstOrDefault(x => x.Login == NameTextBox.Text) == null)
+                    {
+                        User user = new User()
+                        {
+                            Login = NameTextBox.Text,
+                            Password = PasswordBox.Password,
+                        };
+                        ODBClass.entities.User.Add(user);
+                        ODBClass.entities.SaveChanges();
+                        MessageBox.Show("Поздравляю с успешной регистрацией");
+                        GlavnWin win = new GlavnWin();
+                        win.Show();
+                    }
+                    else
+                        MessageBox.Show("Вы уже есть в системе");
+                }
 
-           
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
+        private void BtnSign_Click(object sender, RoutedEventArgs e)
+        {
+            DataHelper.frame.Navigate(new AuthPage());
         }
     }
 }
