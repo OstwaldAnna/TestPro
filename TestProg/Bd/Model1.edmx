@@ -18,11 +18,12 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idQuesion" Type="int" Nullable="false" />
-          <Property Name="idAnswer" Type="int" Nullable="false" />
-          <Property Name="Variants" Type="bit" Nullable="false" />
+          <Property Name="VariantsOne" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VariantsTwo" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VariantsThree" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="VariantsFour" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="idCategory" Type="int" Nullable="false" />
           <Property Name="idTheme" Type="int" Nullable="false" />
-          <Property Name="Date" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -37,6 +38,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="QuestionName" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="AnswerName" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="Result">
           <Key>
@@ -63,6 +65,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ThemeName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Status" Type="float" />
+          <Property Name="IdCategory" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -72,18 +75,6 @@
           <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <Association Name="FK_BankQuesions_Answer">
-          <End Role="Answer" Type="Self.Answer" Multiplicity="1" />
-          <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Answer">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="BankQuesions">
-              <PropertyRef Name="idAnswer" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_BankQuesions_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="*" />
@@ -144,6 +135,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Theme_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Theme" Type="Self.Theme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Theme">
+              <PropertyRef Name="IdCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище proektBDModelContainer">
           <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BankQuesions" EntityType="Self.BankQuesions" Schema="dbo" store:Type="Tables" />
@@ -153,10 +156,6 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Theme" EntityType="Self.Theme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_BankQuesions_Answer" Association="Self.FK_BankQuesions_Answer">
-            <End Role="Answer" EntitySet="Answer" />
-            <End Role="BankQuesions" EntitySet="BankQuesions" />
-          </AssociationSet>
           <AssociationSet Name="FK_BankQuesions_Category" Association="Self.FK_BankQuesions_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="BankQuesions" EntitySet="BankQuesions" />
@@ -177,6 +176,10 @@
             <End Role="User" EntitySet="User" />
             <End Role="Result" EntitySet="Result" />
           </AssociationSet>
+          <AssociationSet Name="FK_Theme_Category" Association="Self.FK_Theme_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Theme" EntitySet="Theme" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -191,10 +194,6 @@
           <EntitySet Name="sysdiagrams" EntityType="proektBDModel.sysdiagrams" />
           <EntitySet Name="Theme" EntityType="proektBDModel.Theme" />
           <EntitySet Name="User" EntityType="proektBDModel.User" />
-          <AssociationSet Name="FK_BankQuesions_Answer" Association="proektBDModel.FK_BankQuesions_Answer">
-            <End Role="Answer" EntitySet="Answer" />
-            <End Role="BankQuesions" EntitySet="BankQuesions" />
-          </AssociationSet>
           <AssociationSet Name="FK_BankQuesions_Category" Association="proektBDModel.FK_BankQuesions_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="BankQuesions" EntitySet="BankQuesions" />
@@ -211,6 +210,10 @@
             <End Role="BankQuesions" EntitySet="BankQuesions" />
             <End Role="Result" EntitySet="Result" />
           </AssociationSet>
+          <AssociationSet Name="FK_Theme_Category" Association="proektBDModel.FK_Theme_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Theme" EntitySet="Theme" />
+          </AssociationSet>
           <AssociationSet Name="FK_Result_User" Association="proektBDModel.FK_Result_User">
             <End Role="User" EntitySet="User" />
             <End Role="Result" EntitySet="Result" />
@@ -222,7 +225,6 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AnswerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Answer" FromRole="Answer" ToRole="BankQuesions" />
         </EntityType>
         <EntityType Name="BankQuesions">
           <Key>
@@ -230,12 +232,12 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idQuesion" Type="Int32" Nullable="false" />
-          <Property Name="idAnswer" Type="Int32" Nullable="false" />
-          <Property Name="Variants" Type="Boolean" Nullable="false" />
+          <Property Name="VariantsOne" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VariantsTwo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VariantsThree" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VariantsFour" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="idCategory" Type="Int32" Nullable="false" />
           <Property Name="idTheme" Type="Int32" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Answer" Relationship="proektBDModel.FK_BankQuesions_Answer" FromRole="BankQuesions" ToRole="Answer" />
           <NavigationProperty Name="Category" Relationship="proektBDModel.FK_BankQuesions_Category" FromRole="BankQuesions" ToRole="Category" />
           <NavigationProperty Name="Question" Relationship="proektBDModel.FK_BankQuesions_Question" FromRole="BankQuesions" ToRole="Question" />
           <NavigationProperty Name="Theme" Relationship="proektBDModel.FK_BankQuesions_Theme" FromRole="BankQuesions" ToRole="Theme" />
@@ -248,6 +250,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Category" FromRole="Category" ToRole="BankQuesions" />
+          <NavigationProperty Name="Theme" Relationship="proektBDModel.FK_Theme_Category" FromRole="Category" ToRole="Theme" />
         </EntityType>
         <EntityType Name="Question">
           <Key>
@@ -255,6 +258,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="QuestionName" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="AnswerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Question" FromRole="Question" ToRole="BankQuesions" />
         </EntityType>
         <EntityType Name="Result">
@@ -284,7 +288,9 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ThemeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Double" />
+          <Property Name="IdCategory" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Theme" FromRole="Theme" ToRole="BankQuesions" />
+          <NavigationProperty Name="Category" Relationship="proektBDModel.FK_Theme_Category" FromRole="Theme" ToRole="Category" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -295,18 +301,6 @@
           <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Result" Relationship="proektBDModel.FK_Result_User" FromRole="User" ToRole="Result" />
         </EntityType>
-        <Association Name="FK_BankQuesions_Answer">
-          <End Type="proektBDModel.Answer" Role="Answer" Multiplicity="1" />
-          <End Type="proektBDModel.BankQuesions" Role="BankQuesions" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Answer">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="BankQuesions">
-              <PropertyRef Name="idAnswer" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_BankQuesions_Category">
           <End Type="proektBDModel.Category" Role="Category" Multiplicity="1" />
           <End Type="proektBDModel.BankQuesions" Role="BankQuesions" Multiplicity="*" />
@@ -355,6 +349,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Theme_Category">
+          <End Type="proektBDModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="proektBDModel.Theme" Role="Theme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Theme">
+              <PropertyRef Name="IdCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Result_User">
           <End Type="proektBDModel.User" Role="User" Multiplicity="1" />
           <End Type="proektBDModel.Result" Role="Result" Multiplicity="*" />
@@ -367,7 +373,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -384,11 +390,12 @@
           <EntitySetMapping Name="BankQuesions">
             <EntityTypeMapping TypeName="proektBDModel.BankQuesions">
               <MappingFragment StoreEntitySet="BankQuesions">
-                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="idTheme" ColumnName="idTheme" />
                 <ScalarProperty Name="idCategory" ColumnName="idCategory" />
-                <ScalarProperty Name="Variants" ColumnName="Variants" />
-                <ScalarProperty Name="idAnswer" ColumnName="idAnswer" />
+                <ScalarProperty Name="VariantsFour" ColumnName="VariantsFour" />
+                <ScalarProperty Name="VariantsThree" ColumnName="VariantsThree" />
+                <ScalarProperty Name="VariantsTwo" ColumnName="VariantsTwo" />
+                <ScalarProperty Name="VariantsOne" ColumnName="VariantsOne" />
                 <ScalarProperty Name="idQuesion" ColumnName="idQuesion" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
@@ -405,6 +412,7 @@
           <EntitySetMapping Name="Question">
             <EntityTypeMapping TypeName="proektBDModel.Question">
               <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="AnswerName" ColumnName="AnswerName" />
                 <ScalarProperty Name="QuestionName" ColumnName="QuestionName" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
@@ -433,6 +441,7 @@
           <EntitySetMapping Name="Theme">
             <EntityTypeMapping TypeName="proektBDModel.Theme">
               <MappingFragment StoreEntitySet="Theme">
+                <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
                 <ScalarProperty Name="id" ColumnName="id" />

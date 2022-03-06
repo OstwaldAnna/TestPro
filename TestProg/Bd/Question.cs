@@ -31,6 +31,8 @@ public partial class Question
 
     public string QuestionName { get; set; }
 
+    public string AnswerName { get; set; }
+
 
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

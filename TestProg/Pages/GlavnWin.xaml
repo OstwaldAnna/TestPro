@@ -37,7 +37,6 @@
                     BorderBrush="Black"/>-->
 
         </Grid>
-
         <Grid Grid.Row="1"
               Grid.Column="0" Background="#26000000">
             <Grid.ColumnDefinitions>
@@ -49,13 +48,15 @@
             <StackPanel Grid.ColumnSpan="2">
                 <Button 
                     Content="Home" 
+                    Name="Home"
                     FontWeight="Bold"
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                     Foreground="Black"
-                   HorizontalContentAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                   HorizontalContentAlignment="Left" RenderTransformOrigin="0.5,0.5"
+                    Click="Home_Click">
                     <Button.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -73,29 +74,27 @@
                         Orientation="Vertical"
                         TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
                         Margin="24,8,24,16">
-                        <Button  Content="C#" 
-                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 FontSize="15"
-                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
-                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                 Foreground="Black"
-                                 HorizontalContentAlignment="Left"/>
-
-                        <Button  Content="Python" 
-                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 FontSize="15"
-                                 HorizontalContentAlignment="Left"
-                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
-                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                 Foreground="Black" />
-
-                        <Button  Content="JavaScript" 
-                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 FontSize="15"
-                                 HorizontalContentAlignment="Left"
-                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
-                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                 Foreground="Black" />
+                        <ItemsControl Name="Category" ItemsSource="{Binding}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button  Content="{Binding Path=CategoryName}" 
+                                             Name="C"
+                                             Tag="{Binding Path=id}"
+                                             Click="C_Click"
+                                             Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                                             FontSize="15"
+                                             IsEnabled="{Binding DataContext.ControlsEnabled, 
+                                        RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
+                                             Foreground="Black"
+                                             HorizontalContentAlignment="Left"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
                     </StackPanel>
                 </Expander>
                 <Expander
@@ -140,7 +139,7 @@
               Grid.Column="1" Background="#26000000">
             <!--<Border BorderThickness="1"
                     BorderBrush="Black"/>-->
-            <Button  Content="Закончить попытку" 
+            <!--<Button  Content="Закончить попытку" 
                      Name="BtnEnd"
                      Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                      FontSize="15"
@@ -151,7 +150,7 @@
                      Foreground="Black"
                      FontWeight="Bold"
                      Margin="10"
-                     Height="30"/>
+                     Height="30"/>-->
 
         </Grid>
         <Grid Grid.Row="1"

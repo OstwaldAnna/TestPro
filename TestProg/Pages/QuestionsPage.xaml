@@ -1,0 +1,68 @@
+﻿<Page x:Class="TestProg.Pages.QuestionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestProg.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="590"
+      Title="QuestionsPage"
+      FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
+            </Grid.Background>
+            <ItemsControl x:Name="QuestionControl" ItemsSource="{Binding}"
+                       VerticalAlignment="Top">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=Question.QuestionName}"
+                                   FontSize="22"
+                                   TextWrapping="Wrap"/>
+                            <StackPanel Margin="10">
+
+                                <RadioButton Content="{Binding Path=VariantsOne}" 
+                                     Background="Transparent"/>
+
+                                <RadioButton Background="Transparent"
+                                     Content="{Binding Path=VariantsThree}"/>
+                                <RadioButton Background="Transparent"
+                                     Content="{Binding Path=VariantsTwo}"/>
+                                <RadioButton Background="Transparent"
+                                     Content="{Binding Path=VariantsFour}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+
+            <Button Name="BtnAnswer" 
+                    Content="Ответить" 
+                    Click="BtnAnswer_Click"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Background="Transparent"
+                    BorderBrush="Black"
+                    Foreground="Black"
+                    Width="175"
+                    Height="32"
+                    materialDesign:ButtonAssist.CornerRadius="15"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, 
+                RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Grid.Row="1">
+            </Button>
+        </Grid>
+    </ScrollViewer>
+</Page>

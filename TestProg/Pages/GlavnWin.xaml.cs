@@ -24,7 +24,17 @@ namespace TestProg.Pages
         {
             InitializeComponent();
             DataHelper.frameQuest = FrmQuestions;
-            DataHelper.frameQuest.Navigate(new QestionsPage());
+            Category.ItemsSource = ODBClass.entities.Category.ToList();
+        }
+
+        private void C_Click(object sender, RoutedEventArgs e)
+        {
+            DataHelper.frameQuest.Navigate(new ThemePage((int)((Button)sender).Tag));
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            DataHelper.frameQuest.Navigate(null);
         }
     }
 }

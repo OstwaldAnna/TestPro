@@ -218,11 +218,9 @@ E:\TestPro\TestProg\bin\Debug\MaterialDesignColors.pdb
 E:\TestPro\TestProg\bin\Debug\MaterialDesignThemes.Wpf.pdb
 E:\TestPro\TestProg\bin\Debug\MaterialDesignThemes.Wpf.xml
 E:\TestPro\TestProg\bin\Debug\ru\EntityFramework.resources.dll
-E:\TestPro\TestProg\obj\Debug\TestProg.csproj.AssemblyReference.cache
 E:\TestPro\TestProg\obj\Debug\MainWindow.g.cs
 E:\TestPro\TestProg\obj\Debug\Pages\AuthPage.g.cs
 E:\TestPro\TestProg\obj\Debug\Pages\GlavnWin.g.cs
-E:\TestPro\TestProg\obj\Debug\Pages\QestionsPage.g.cs
 E:\TestPro\TestProg\obj\Debug\Pages\RegPage.g.cs
 E:\TestPro\TestProg\obj\Debug\App.g.cs
 E:\TestPro\TestProg\obj\Debug\TestProg_Content.g.cs
@@ -232,7 +230,6 @@ E:\TestPro\TestProg\obj\Debug\App.baml
 E:\TestPro\TestProg\obj\Debug\MainWindow.baml
 E:\TestPro\TestProg\obj\Debug\Pages\AuthPage.baml
 E:\TestPro\TestProg\obj\Debug\Pages\GlavnWin.baml
-E:\TestPro\TestProg\obj\Debug\Pages\QestionsPage.baml
 E:\TestPro\TestProg\obj\Debug\Pages\RegPage.baml
 E:\TestPro\TestProg\obj\Debug\TestProg.g.resources
 E:\TestPro\TestProg\obj\Debug\TestProg.Properties.Resources.resources
@@ -240,3 +237,9 @@ E:\TestPro\TestProg\obj\Debug\TestProg.csproj.GenerateResource.cache
 E:\TestPro\TestProg\obj\Debug\TestProg.csproj.CoreCompileInputs.cache
 E:\TestPro\TestProg\obj\Debug\TestProg.exe
 E:\TestPro\TestProg\obj\Debug\TestProg.pdb
+E:\TestPro\TestProg\obj\Debug\TestProg.csproj.CopyComplete
+E:\TestPro\TestProg\obj\Debug\TestProg.csproj.AssemblyReference.cache
+E:\TestPro\TestProg\obj\Debug\Pages\QuestionsPage.g.cs
+E:\TestPro\TestProg\obj\Debug\Pages\ThemePage.g.cs
+E:\TestPro\TestProg\obj\Debug\Pages\QuestionsPage.baml
+E:\TestPro\TestProg\obj\Debug\Pages\ThemePage.baml

@@ -31,19 +31,19 @@ public partial class BankQuesions
 
     public int idQuesion { get; set; }
 
-    public int idAnswer { get; set; }
+    public string VariantsOne { get; set; }
 
-    public bool Variants { get; set; }
+    public string VariantsTwo { get; set; }
+
+    public string VariantsThree { get; set; }
+
+    public string VariantsFour { get; set; }
 
     public int idCategory { get; set; }
 
     public int idTheme { get; set; }
 
-    public System.DateTime Date { get; set; }
 
-
-
-    public virtual Answer Answer { get; set; }
 
     public virtual Category Category { get; set; }
 

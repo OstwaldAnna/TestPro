@@ -33,11 +33,15 @@ public partial class Theme
 
     public Nullable<double> Status { get; set; }
 
+    public int IdCategory { get; set; }
+
 
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<BankQuesions> BankQuesions { get; set; }
+
+    public virtual Category Category { get; set; }
 
 }
 
