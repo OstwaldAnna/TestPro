@@ -43,7 +43,7 @@ namespace TestProg.Pages
                         ODBClass.entities.User.Add(user);
                         ODBClass.entities.SaveChanges();
                         MessageBox.Show("Поздравляю с успешной регистрацией");
-                        GlavnWin win = new GlavnWin();
+                        GlavnWin win = new GlavnWin(user);
                         win.Show();
                     }
                     else

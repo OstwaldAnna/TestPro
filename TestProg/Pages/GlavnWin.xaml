@@ -13,9 +13,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
-
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
             <RowDefinition Height="709*"/>
@@ -31,11 +28,11 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="16"
+                Foreground="#FF1E1E1E"
                 Text="Menu"
                 FontWeight="Bold" />
             <!--<Border BorderThickness="1"
                     BorderBrush="Black"/>-->
-
         </Grid>
         <Grid Grid.Row="1"
               Grid.Column="0" Background="#26000000">
@@ -54,7 +51,7 @@
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                    Foreground="Black"
+                    Foreground="#FF1E1E1E"
                    HorizontalContentAlignment="Left" RenderTransformOrigin="0.5,0.5"
                     Click="Home_Click">
                     <Button.RenderTransform>
@@ -67,7 +64,7 @@
                     </Button.RenderTransform>
                 </Button>
                 <Expander  
-                    Foreground="Black"
+                    Foreground="#FF1E1E1E"
                     FontWeight="Bold"
                     Header="Tests" Background="#02000000">
                     <StackPanel
@@ -85,7 +82,7 @@
                                              FontSize="15"
                                              IsEnabled="{Binding DataContext.ControlsEnabled, 
                                         RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                             Foreground="Black"
+                                             Foreground="#FF1E1E1E"
                                              HorizontalContentAlignment="Left"/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
@@ -130,13 +127,25 @@
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                    Foreground="Black"
+                    Foreground="#FF1E1E1E"
                     HorizontalContentAlignment="Left">
                 </Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="0"
               Grid.Column="1" Background="#26000000">
+            <TextBlock Text="TextPro"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="15"
+                       FontWeight="Bold"/>
+            <TextBlock Name="TbUser"
+                       FontSize="15"
+                       FontWeight="Bold"
+                       Text="[имя пользователя]"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
             <!--<Border BorderThickness="1"
                     BorderBrush="Black"/>-->
             <!--<Button  Content="Закончить попытку" 

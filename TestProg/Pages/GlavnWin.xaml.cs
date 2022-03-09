@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TestProg.Bd;
 using TestProg.Cl;
 
 namespace TestProg.Pages
@@ -20,9 +21,10 @@ namespace TestProg.Pages
     /// </summary>
     public partial class GlavnWin : Window
     {
-        public GlavnWin()
+        public GlavnWin(User user)
         {
             InitializeComponent();
+            TbUser.Text = user.Login;
             DataHelper.frameQuest = FrmQuestions;
             Category.ItemsSource = ODBClass.entities.Category.ToList();
         }

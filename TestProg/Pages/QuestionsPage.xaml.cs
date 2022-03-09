@@ -31,7 +31,19 @@ namespace TestProg.Pages
 
         private void BtnAnswer_Click(object sender, RoutedEventArgs e)
         {
-            
+            int answer = 0;
+            foreach (var item in QuestionControl.Items)
+            {
+                if (item is RadioButton)
+                {
+                    if ((bool)((RadioButton)item).IsChecked && (string)((RadioButton)item).Content == (string)((RadioButton)item).Tag)
+                    {
+                        answer++;
+                    }
+                }
+            }
+            //}
+            MessageBox.Show(answer.ToString());
         }
     }
 }

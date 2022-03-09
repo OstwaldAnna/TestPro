@@ -33,7 +33,7 @@ namespace TestProg.Pages
                 var user = ODBClass.entities.User.FirstOrDefault(x => x.Login == NameTextBox.Text && x.Password == PasswordBox.Password);
                 if (user != null)
                 {
-                    GlavnWin win = new GlavnWin();
+                    GlavnWin win = new GlavnWin(user);
                     win.Show();
                     
                 }

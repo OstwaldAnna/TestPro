@@ -167,9 +167,7 @@ C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.SqlServer.
 C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.xml
 C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QestionsPage.g.cs
 C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\TestProg_Content.g.cs
-C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QestionsPage.baml
 C:\Users\Admin\Desktop\TestPro-main\TestProg\bin\Debug\TestProg.exe.config
 C:\Users\Admin\Desktop\TestPro-main\TestProg\bin\Debug\TestProg.exe
 C:\Users\Admin\Desktop\TestPro-main\TestProg\bin\Debug\TestProg.pdb
@@ -243,3 +241,7 @@ E:\TestPro\TestProg\obj\Debug\Pages\QuestionsPage.g.cs
 E:\TestPro\TestProg\obj\Debug\Pages\ThemePage.g.cs
 E:\TestPro\TestProg\obj\Debug\Pages\QuestionsPage.baml
 E:\TestPro\TestProg\obj\Debug\Pages\ThemePage.baml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QuestionsPage.g.cs
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\ThemePage.g.cs
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\QuestionsPage.baml
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\ThemePage.baml

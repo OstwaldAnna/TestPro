@@ -19,49 +19,58 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
             </Grid.Background>
-            <ItemsControl x:Name="QuestionControl" ItemsSource="{Binding}"
-                       VerticalAlignment="Top">
+            <ListBox Name="QuestionControl" 
+                          ItemsSource="{Binding}"
+                          VerticalAlignment="Top"
+                          Margin="10">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding Path=Question.QuestionName}"
-                                   FontSize="22"
-                                   TextWrapping="Wrap"/>
+                                       Tag="{Binding Path=Question.AnswerName}"
+                                       Name="TbRight"
+                                       FontSize="22"
+                                       TextWrapping="Wrap"/>
                             <StackPanel Margin="10">
-
                                 <RadioButton Content="{Binding Path=VariantsOne}" 
-                                     Background="Transparent"/>
-
+                                             Background="Transparent"
+                                             />
                                 <RadioButton Background="Transparent"
-                                     Content="{Binding Path=VariantsThree}"/>
+                                             Content="{Binding Path=VariantsThree}"
+                                             Tag="{Binding Path=Question.AnswerName}"/>
                                 <RadioButton Background="Transparent"
-                                     Content="{Binding Path=VariantsTwo}"/>
+                                             
+                                             Content="{Binding Path=VariantsTwo}"/>
                                 <RadioButton Background="Transparent"
-                                     Content="{Binding Path=VariantsFour}"/>
+                                             Content="{Binding Path=VariantsFour}"
+                                             />
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel/>
+                        <StackPanel/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-            </ItemsControl>
+            </ListBox>
 
             <Button Name="BtnAnswer" 
                     Content="Ответить" 
+                    HorizontalContentAlignment="Center"
                     Click="BtnAnswer_Click"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
                     Background="Transparent"
                     BorderBrush="Black"
                     Foreground="Black"
-                    Width="175"
-                    Height="32"
+                    Width="140"
+                    Height="30"
+                    Margin="20"
                     materialDesign:ButtonAssist.CornerRadius="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Grid.Row="1">
+                
             </Button>
         </Grid>
     </ScrollViewer>
