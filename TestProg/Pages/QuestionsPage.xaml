@@ -19,7 +19,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
             </Grid.Background>
-            <ListBox Name="QuestionControl" 
+            <ItemsControl Name="QuestionControl" 
                           ItemsSource="{Binding}"
                           VerticalAlignment="Top"
                           Margin="10">
@@ -53,7 +53,7 @@
                         <StackPanel/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-            </ListBox>
+            </ItemsControl>
 
             <Button Name="BtnAnswer" 
                     Content="Ответить" 
