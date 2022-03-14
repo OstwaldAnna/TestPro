@@ -22,16 +22,60 @@ namespace TestProg.Pages
     /// </summary>
     public partial class QuestionsPage : Page
     {  
-        public QuestionsPage(int id)
+        /// <summary>
+        /// Количество правильных ответов
+        /// </summary>
+        static int countQuest { get; set; }
+        /// <summary>
+        /// Текущий номер вопроса
+        /// </summary>
+        static int _count { get; set; }
+        public QuestionsPage(int? count = 0)
         {
             InitializeComponent();
-            Random random = new Random();
-            QuestionControl.ItemsSource = ODBClass.entities.BankQuesions.Where(x => x.idTheme == id).ToList().OrderBy(x => random.Next());
+            count = _count;
+            PBQuestion.Maximum = QuestionClass.quesions.Count();
+            QuestionCreate(_count);
         }
 
+        private void QuestionCreate(int? questnum)
+        {
+            if (questnum == 0)
+            {
+                countQuest = 0;
+            }
+
+            if (_count == QuestionClass.quesions.Count())
+            {
+                MessageBox.Show("Нюхай бебру " + countQuest);
+                //Application.Current.Shutdown();
+                return;
+            }
+
+            var quest = QuestionClass.quesions.ElementAt((int)questnum);
+            PBQuestion.Value = (double)questnum;
+            TbQuestion.Tag = quest.Question.AnswerName;
+            TbQuestion.Text = quest.Question.QuestionName;
+            RBtnOne.Content = quest.VariantsOne;
+            RBtnTwo.Content = quest.VariantsTwo;
+            RBtnThree.Content = quest.VariantsThree;
+            RBtnFour.Content = quest.VariantsFour;
+            TbQuestionCount.Text = $"{_count+1} из {QuestionClass.quesions.Count()}";
+        }
         private void BtnAnswer_Click(object sender, RoutedEventArgs e)
         {
-           
+            foreach (object item in SP.Children)
+            {
+                if (item is RadioButton)
+                {
+                    if ((bool)((RadioButton)item).IsChecked && (string)((RadioButton)item).Content == (string)TbQuestion.Tag)
+                    {
+                        countQuest++;
+                    }
+                }
+            }
+            _count++;
+            DataHelper.frameQuest.Navigate(new QuestionsPage(_count));
         }
     }
 }

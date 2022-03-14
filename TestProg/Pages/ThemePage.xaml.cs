@@ -29,7 +29,8 @@ namespace TestProg.Pages
 
         private void BtnTheme_Click(object sender, RoutedEventArgs e)
         {
-            DataHelper.frameQuest.Navigate(new QuestionsPage((int)((Button)sender).Tag));
+            QuestionClass.Question((int)((Button)sender).Tag);
+            DataHelper.frameQuest.Navigate(new QuestionsPage(null));
         }
     }
 }

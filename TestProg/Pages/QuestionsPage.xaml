@@ -19,42 +19,33 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
             </Grid.Background>
-            <ItemsControl Name="QuestionControl" 
-                          ItemsSource="{Binding}"
-                          VerticalAlignment="Top"
-                          Margin="10">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Path=Question.QuestionName}"
-                                       Tag="{Binding Path=Question.AnswerName}"
-                                       Name="TbRight"
-                                       FontSize="22"
-                                       TextWrapping="Wrap"/>
-                            <StackPanel Margin="10">
-                                <RadioButton Content="{Binding Path=VariantsOne}" 
-                                             Background="Transparent"
-                                             />
-                                <RadioButton Background="Transparent"
-                                             Content="{Binding Path=VariantsThree}"
-                                             Tag="{Binding Path=Question.AnswerName}"/>
-                                <RadioButton Background="Transparent"
-                                             
-                                             Content="{Binding Path=VariantsTwo}"/>
-                                <RadioButton Background="Transparent"
-                                             Content="{Binding Path=VariantsFour}"
-                                             />
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>
-
+            <TextBlock Text="0 из 0" Name="TbQuestionCount" Margin="30 10"/>
+            <ProgressBar VerticalAlignment="Top"
+                         Value="1" 
+                         Height="10"
+                         Margin="30"
+                         Name="PBQuestion"/>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <TextBlock Text="Что будет если смешать колу и ментос?"
+                                    Name="TbQuestion"
+                                    FontSize="22"
+                                    TextWrapping="Wrap"/>
+                <StackPanel Margin="10" Name="SP">
+                    <RadioButton Content="[Вариант 1]" 
+                                            Background="Transparent"
+                                 Name="RBtnOne"/>
+                    <RadioButton Background="Transparent"
+                                            Content="[Вариант 2]"
+                                 Name="RBtnTwo"/>
+                    <RadioButton Background="Transparent"
+                                            Content="[Вариант 3]"
+                                 Name="RBtnThree"/>
+                    <RadioButton Background="Transparent"
+                                            Content="[Вариант 4]"
+                                 Name="RBtnFour"/>
+                </StackPanel>
+            </StackPanel>
             <Button Name="BtnAnswer" 
                     Content="Ответить" 
                     HorizontalContentAlignment="Center"
@@ -66,11 +57,11 @@
                     Width="140"
                     Height="30"
                     Margin="20"
-                    materialDesign:ButtonAssist.CornerRadius="15"
+                    materialDesign:ButtonAssist.CornerRadius="14"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Grid.Row="1">
-                
+
             </Button>
         </Grid>
     </ScrollViewer>

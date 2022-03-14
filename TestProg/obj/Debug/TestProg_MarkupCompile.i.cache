@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\
+C:\Users\Asya\Desktop\Mob\Mob\TestProg\obj\Debug\
 TestProg
 none
 false
 DEBUG;TRACE
-C:\Users\Asya\Documents\GitHub\Mob\TestProg\App.xaml
+C:\Users\Asya\Desktop\Mob\Mob\TestProg\App.xaml
 6-1424196409
 21800425316
-241779930930
-20-725094967
+251320392670
+201880307888
 MainWindow.xaml;Pages\AuthPage.xaml;Pages\GlavnWin.xaml;Pages\QuestionsPage.xaml;Pages\RegPage.xaml;Pages\ThemePage.xaml;
 
-False
+True
 
