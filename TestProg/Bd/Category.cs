@@ -24,8 +24,6 @@ public partial class Category
 
         this.BankQuesions = new HashSet<BankQuesions>();
 
-        this.Theme = new HashSet<Theme>();
-
     }
 
 
@@ -38,10 +36,6 @@ public partial class Category
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
     public virtual ICollection<BankQuesions> BankQuesions { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-    public virtual ICollection<Theme> Theme { get; set; }
 
 }
 

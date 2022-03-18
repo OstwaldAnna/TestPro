@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestProg.Pages"
       mc:Ignorable="d" 
+      FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
       d:DesignHeight="525" d:DesignWidth="590"
       Title="ThemePage">
 
@@ -12,14 +13,27 @@
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
-        <ItemsControl HorizontalAlignment="Left" Name="ThemeControl" ItemsSource="{Binding}">
+        <TextBlock VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Name="TbCategory"
+                   Margin="10" FontWeight="Bold"
+                   FontSize="20"/>
+        <ItemsControl HorizontalAlignment="Center" Margin="30"
+                      Name="ThemeControl" ItemsSource="{Binding}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Margin="5" Height="80"
-                    Content="{Binding Path=ThemeName}"
-                    Tag="{Binding Path=id}"
+                    <StackPanel>
+                    <Image Margin="10" Height="70"
+                            Width="70"
+                            Source="{Binding Path=ImageTheme}"
+                            Tag="{Binding Path=id}"
                             Name="BtnTheme"
-                            Click="BtnTheme_Click"/>
+                           Stretch="Uniform"
+                            MouseDown="BtnTheme_MouseDown"/>
+                        <TextBlock Text="{Binding Path=ThemeName}"
+                                   TextAlignment="Center"
+                                   FontSize="15"/>
+                    </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
             <ItemsControl.ItemsPanel>

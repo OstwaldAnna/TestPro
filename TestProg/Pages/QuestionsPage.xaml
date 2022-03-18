@@ -10,43 +10,59 @@
       FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
-    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="32*"/>
-                <RowDefinition Height="3*"/>
-            </Grid.RowDefinitions>
-            <Grid.Background>
-                <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
-            </Grid.Background>
-            <TextBlock Text="0 из 0" Name="TbQuestionCount" Margin="30 10"/>
-            <ProgressBar VerticalAlignment="Top"
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
+        </Grid.Background>
+
+        <TextBlock Text="0 из 0" 
+                   Name="TbQuestionCount" 
+                   Margin="0,10,110,0"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right" Width="65"
+                   FontSize="15"
+                   Height="20"
+                   />
+        <ProgressBar 
+                    HorizontalAlignment="Right"
+                    Width="150"
+                    VerticalAlignment="Top"
                          Value="1" 
                          Height="10"
-                         Margin="30"
-                         Name="PBQuestion"/>
-            <StackPanel VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                <TextBlock Text="Что будет если смешать колу и ментос?"
+                         Margin="365,30,30,0"
+                         x:Name="PBQuestion"
+                         Background="#A6FBF8"
+                         Foreground="#A1DAD8"/>
+
+        <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="15"
+                        Width="450">
+            <TextBlock Text="Что будет если смешать колу и ментос?"
                                     Name="TbQuestion"
                                     FontSize="22"
                                     TextWrapping="Wrap"/>
-                <StackPanel Margin="10" Name="SP">
-                    <RadioButton Content="[Вариант 1]" 
+            <StackPanel Margin="10" Name="SP">
+                <RadioButton Content="[Вариант 1]" 
                                             Background="Transparent"
                                  Name="RBtnOne"/>
-                    <RadioButton Background="Transparent"
+                <RadioButton Background="Transparent"
                                             Content="[Вариант 2]"
                                  Name="RBtnTwo"/>
-                    <RadioButton Background="Transparent"
+                <RadioButton Background="Transparent"
                                             Content="[Вариант 3]"
                                  Name="RBtnThree"/>
-                    <RadioButton Background="Transparent"
+                <RadioButton Background="Transparent"
                                             Content="[Вариант 4]"
                                  Name="RBtnFour"/>
-                </StackPanel>
             </StackPanel>
-            <Button Name="BtnAnswer" 
+        </StackPanel>
+        <Button Name="BtnAnswer" 
                     Content="Ответить" 
                     HorizontalContentAlignment="Center"
                     Click="BtnAnswer_Click"
@@ -56,13 +72,12 @@
                     Foreground="Black"
                     Width="140"
                     Height="30"
-                    Margin="20"
-                    materialDesign:ButtonAssist.CornerRadius="14"
+                    materialDesign:ButtonAssist.CornerRadius="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
                 RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Grid.Row="1">
 
-            </Button>
-        </Grid>
-    </ScrollViewer>
+        </Button>
+    </Grid>
+
 </Page>

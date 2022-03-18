@@ -44,12 +44,15 @@ namespace TestProg.Pages
             {
                 MessageBox.Show("Что-то пошло не так. Повторите попытку.");
             }
+
             //MainWindow winn = new MainWindow();
             //winn.Hide();
 
             //AuthPage winn = new AuthPage();
             //winn.Hide();
-
+            MainWindow main = Application.Current.MainWindow as MainWindow;
+            if (main != null)
+                main.Close();
         }
 
 

@@ -47,11 +47,10 @@ namespace TestProg.Pages
 
             if (_count == QuestionClass.quesions.Count())
             {
-                MessageBox.Show("Нюхай бебру " + countQuest);
+                MessageBox.Show("Вы набрали " + countQuest);
                 //Application.Current.Shutdown();
                 return;
             }
-
             var quest = QuestionClass.quesions.ElementAt((int)questnum);
             PBQuestion.Value = (double)questnum;
             TbQuestion.Tag = quest.Question.AnswerName;
@@ -75,7 +74,9 @@ namespace TestProg.Pages
                 }
             }
             _count++;
-            DataHelper.frameQuest.Navigate(new QuestionsPage(_count));
+            QuestionCreate(_count);
+
+            //DataHelper.frameQuest.Navigate(new QuestionsPage(_count));
         }
     }
 }

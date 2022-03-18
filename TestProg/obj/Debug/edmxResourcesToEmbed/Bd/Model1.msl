@@ -43,6 +43,7 @@
     <EntitySetMapping Name="Result">
       <EntityTypeMapping TypeName="proektBDModel.Result">
         <MappingFragment StoreEntitySet="Result">
+          <ScalarProperty Name="ImageResult" ColumnName="ImageResult" />
           <ScalarProperty Name="idBankQuestions" ColumnName="idBankQuestions" />
           <ScalarProperty Name="idUser" ColumnName="idUser" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -63,8 +64,8 @@
     <EntitySetMapping Name="Theme">
       <EntityTypeMapping TypeName="proektBDModel.Theme">
         <MappingFragment StoreEntitySet="Theme">
+          <ScalarProperty Name="ImageTheme" ColumnName="ImageTheme" />
           <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="ThemeName" ColumnName="ThemeName" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>

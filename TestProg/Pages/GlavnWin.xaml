@@ -29,7 +29,7 @@
                 VerticalAlignment="Center"
                 FontSize="16"
                 Foreground="#FF1E1E1E"
-                Text="Menu"
+                Text="Меню"
                 FontWeight="Bold" />
             <!--<Border BorderThickness="1"
                     BorderBrush="Black"/>-->
@@ -44,9 +44,9 @@
                     BorderBrush="Black" Grid.ColumnSpan="2"/>-->
             <StackPanel Grid.ColumnSpan="2">
                 <Button 
-                    Content="Home" 
+                    Content="Главная страница" 
                     Name="Home"
-                    FontWeight="Bold"
+                    
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                     FontSize="15"
                     IsEnabled="{Binding DataContext.ControlsEnabled, 
@@ -65,8 +65,8 @@
                 </Button>
                 <Expander  
                     Foreground="#FF1E1E1E"
-                    FontWeight="Bold"
-                    Header="Tests" Background="#02000000">
+                    Margin="-7" FontWeight="DemiBold"
+                    Header="Тесты" Background="#02000000">
                     <StackPanel
                         Orientation="Vertical"
                         TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
@@ -94,7 +94,7 @@
                         </ItemsControl>
                     </StackPanel>
                 </Expander>
-                <Expander
+                <!--<Expander
                     HorizontalAlignment="Stretch"
                     Header="Profile"
                     Foreground="Black"
@@ -102,25 +102,20 @@
                     <StackPanel
                         Orientation="Vertical"
                         TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
-                        Margin="24,8,24,16">
-                        <Button  Content="Edit profile" 
+                        Margin="24,8,24,16">-->
+                <Button  Content="Профиль" 
                                  Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                                  FontSize="15"
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
                             RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                 Foreground="Black"
-                                 HorizontalContentAlignment="Left">
-                        </Button>
-                        <Button  Content="Change account" 
-                                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
-                                 FontSize="15"
+                                 Foreground="#FF1E1E1E"
                                  HorizontalContentAlignment="Left"
-                                 IsEnabled="{Binding DataContext.ControlsEnabled, 
-                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
-                                 Foreground="Black" />
-                    </StackPanel>
-                </Expander>
-                <Button 
+                         />
+
+
+                <!--</StackPanel>
+                </Expander>-->
+                <!--<Button 
                     Content="Rating" 
                     FontWeight="Bold"
                     Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
@@ -129,12 +124,12 @@
                     RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                     Foreground="#FF1E1E1E"
                     HorizontalContentAlignment="Left">
-                </Button>
+                </Button>-->
             </StackPanel>
         </Grid>
         <Grid Grid.Row="0"
               Grid.Column="1" Background="#26000000">
-            <TextBlock Text="TextPro"
+            <TextBlock Text="TestPRO"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
                        FontSize="15"
