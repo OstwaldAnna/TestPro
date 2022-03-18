@@ -24,12 +24,20 @@ namespace TestProg.Pages
         public ThemePage(int id)
         {
             InitializeComponent();
+            TbCategory.Text = ODBClass.entities.Category.FirstOrDefault(x => x.id == id).CategoryName;
             ThemeControl.ItemsSource = ODBClass.entities.Theme.Where(x => x.IdCategory == id).ToList();
         }
 
-        private void BtnTheme_Click(object sender, RoutedEventArgs e)
+        //private void BtnTheme_Click(object sender, RoutedEventArgs e)
+        //{
+        //    QuestionClass.Question((int)((Button)sender).Tag);
+        //    DataHelper.frameQuest.Navigate(new QuestionsPage(null));
+        //}
+
+        private void BtnTheme_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DataHelper.frameQuest.Navigate(new QuestionsPage((int)((Button)sender).Tag));
+            QuestionClass.Question((int)((Image)sender).Tag);
+            DataHelper.frameQuest.Navigate(new QuestionsPage(null));
         }
     }
 }

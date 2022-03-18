@@ -24,11 +24,11 @@ public partial class Result
 
     public int idBankQuestions { get; set; }
 
+    public string ImageResult { get; set; }
+
 
 
     public virtual BankQuesions BankQuesions { get; set; }
-
-    public virtual User User { get; set; }
 
 }
 

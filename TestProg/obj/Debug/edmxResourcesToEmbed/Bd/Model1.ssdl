@@ -42,6 +42,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idUser" Type="int" Nullable="false" />
     <Property Name="idBankQuestions" Type="int" Nullable="false" />
+    <Property Name="ImageResult" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -59,8 +60,8 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ThemeName" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Status" Type="float" />
     <Property Name="IdCategory" Type="int" Nullable="false" />
+    <Property Name="ImageTheme" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -118,30 +119,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Result_User">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
-    <End Role="Result" Type="Self.Result" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Result">
-        <PropertyRef Name="idUser" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Theme_Category">
-    <End Role="Category" Type="Self.Category" Multiplicity="1" />
-    <End Role="Theme" Type="Self.Theme" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Category">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Theme">
-        <PropertyRef Name="IdCategory" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="Хранилище proektBDModelContainer">
     <EntitySet Name="Answer" EntityType="Self.Answer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BankQuesions" EntityType="Self.BankQuesions" Schema="dbo" store:Type="Tables" />
@@ -166,14 +143,6 @@
     <AssociationSet Name="FK_Result_BankQuesions" Association="Self.FK_Result_BankQuesions">
       <End Role="BankQuesions" EntitySet="BankQuesions" />
       <End Role="Result" EntitySet="Result" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Result_User" Association="Self.FK_Result_User">
-      <End Role="User" EntitySet="User" />
-      <End Role="Result" EntitySet="Result" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Theme_Category" Association="Self.FK_Theme_Category">
-      <End Role="Category" EntitySet="Category" />
-      <End Role="Theme" EntitySet="Theme" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
