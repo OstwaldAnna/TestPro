@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="proektBDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="proektBDEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="proektBDEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Answer" EntityType="proektBDModel.Answer" />
     <EntitySet Name="BankQuesions" EntityType="proektBDModel.BankQuesions" />
     <EntitySet Name="Category" EntityType="proektBDModel.Category" />
@@ -23,6 +23,14 @@
     </AssociationSet>
     <AssociationSet Name="FK_Result_BankQuesions" Association="proektBDModel.FK_Result_BankQuesions">
       <End Role="BankQuesions" EntitySet="BankQuesions" />
+      <End Role="Result" EntitySet="Result" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Theme_Category" Association="proektBDModel.FK_Theme_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Theme" EntitySet="Theme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result_User" Association="proektBDModel.FK_Result_User">
+      <End Role="User" EntitySet="User" />
       <End Role="Result" EntitySet="Result" />
     </AssociationSet>
   </EntityContainer>
@@ -57,6 +65,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Category" FromRole="Category" ToRole="BankQuesions" />
+    <NavigationProperty Name="Theme" Relationship="proektBDModel.FK_Theme_Category" FromRole="Category" ToRole="Theme" />
   </EntityType>
   <EntityType Name="Question">
     <Key>
@@ -76,6 +85,7 @@
     <Property Name="idBankQuestions" Type="Int32" Nullable="false" />
     <Property Name="ImageResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_Result_BankQuesions" FromRole="Result" ToRole="BankQuesions" />
+    <NavigationProperty Name="User" Relationship="proektBDModel.FK_Result_User" FromRole="Result" ToRole="User" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -96,6 +106,7 @@
     <Property Name="IdCategory" Type="Int32" Nullable="false" />
     <Property Name="ImageTheme" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="BankQuesions" Relationship="proektBDModel.FK_BankQuesions_Theme" FromRole="Theme" ToRole="BankQuesions" />
+    <NavigationProperty Name="Category" Relationship="proektBDModel.FK_Theme_Category" FromRole="Theme" ToRole="Category" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -104,6 +115,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Login" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Result" Relationship="proektBDModel.FK_Result_User" FromRole="User" ToRole="Result" />
   </EntityType>
   <Association Name="FK_BankQuesions_Category">
     <End Type="proektBDModel.Category" Role="Category" Multiplicity="1" />
@@ -150,6 +162,30 @@
       </Principal>
       <Dependent Role="Result">
         <PropertyRef Name="idBankQuestions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Theme_Category">
+    <End Type="proektBDModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="proektBDModel.Theme" Role="Theme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Theme">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result_User">
+    <End Type="proektBDModel.User" Role="User" Multiplicity="1" />
+    <End Type="proektBDModel.Result" Role="Result" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Result">
+        <PropertyRef Name="idUser" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
