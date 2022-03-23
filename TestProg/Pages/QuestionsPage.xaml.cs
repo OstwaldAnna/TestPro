@@ -47,6 +47,7 @@ namespace TestProg.Pages
 
             if (_count == QuestionClass.quesions.Count())
             {
+                DataHelper.frameQuest.Navigate(new ResultPage());
                 MessageBox.Show("Вы набрали " + countQuest);
                 //Application.Current.Shutdown();
                 return;

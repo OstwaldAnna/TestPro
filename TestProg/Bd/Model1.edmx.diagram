@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d949ddac44e04d13a5d1c889a0b42802" Name="Diagram1">
-        <EntityTypeShape EntityType="proektBDModel.Answer" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="proektBDModel.BankQuesions" Width="1.5" PointX="5.25" PointY="4.75" />
-        <EntityTypeShape EntityType="proektBDModel.Category" Width="1.5" PointX="0.75" PointY="3.375" />
-        <EntityTypeShape EntityType="proektBDModel.Question" Width="1.5" PointX="3" PointY="4.5" />
-        <EntityTypeShape EntityType="proektBDModel.Result" Width="1.5" PointX="7.5" PointY="5.25" />
-        <EntityTypeShape EntityType="proektBDModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="proektBDModel.Theme" Width="1.5" PointX="3" PointY="7.25" />
-        <EntityTypeShape EntityType="proektBDModel.User" Width="1.5" PointX="5.25" PointY="1.5" />
-        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Category" />
-        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Question" />
-        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Theme" />
-        <AssociationConnector Association="proektBDModel.FK_Result_BankQuesions" />
-        <AssociationConnector Association="proektBDModel.FK_Theme_Category" />
-        <AssociationConnector Association="proektBDModel.FK_Result_User" />
+      <Diagram DiagramId="bd355cdf81ed4a7c84979d2e81432d5a" Name="Diagram1">
+        <EntityTypeShape EntityType="proektBDModel.Answer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.BankQuesions" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.Category" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.Question" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.Result" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.Theme" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="proektBDModel.User" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="proektBDModel.FK_BankQuesions_Theme" ManuallyRouted="false" />
+        <AssociationConnector Association="proektBDModel.FK_Result_BankQuesions" ManuallyRouted="false" />
+        <AssociationConnector Association="proektBDModel.FK_Theme_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="proektBDModel.FK_Result_User" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

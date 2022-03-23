@@ -6,11 +6,25 @@
       xmlns:local="clr-namespace:TestProg.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="525" d:DesignWidth="590"
-      Title="ResultPage">
+      Title="ResultPage"
+      FontFamily="/TestProg;component/Resurs/Fonts/static/#Montserrat"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
+        <TextBlock VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Name="TbTheme"
+                   Margin="10" 
+                   FontWeight="Bold"
+                   FontSize="20"/>
+        <TextBlock Text="Ваши результаты:"
+                   FontWeight="Bold"
+                   Margin="20,85,370,415"
+                   FontSize="18"/>
+
+
     </Grid>
 </Page>

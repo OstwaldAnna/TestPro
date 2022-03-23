@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestProg.Cl;
 
 namespace TestProg.Pages
 {
@@ -20,9 +21,10 @@ namespace TestProg.Pages
     /// </summary>
     public partial class ResultPage : Page
     {
-        public ResultPage()
+        public ResultPage(int id)
         {
             InitializeComponent();
+            TbTheme.Text = ODBClass.entities.Theme.FirstOrDefault(x => x.id == id).ThemeName;
         }
     }
 }
