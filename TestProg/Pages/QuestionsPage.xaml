@@ -19,15 +19,16 @@
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
-
+        <TextBlock Text="[ТЕМА]" Name="TbTheme"
+                   Margin="10"
+                   FontSize="15"/>
         <TextBlock Text="0 из 0" 
                    Name="TbQuestionCount" 
                    Margin="0,10,110,0"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Right" Width="65"
                    FontSize="15"
-                   Height="20"
-                   />
+                   Height="20"/>
         <ProgressBar 
                     HorizontalAlignment="Right"
                     Width="150"
@@ -49,17 +50,16 @@
                                     TextWrapping="Wrap"/>
             <StackPanel Margin="10" Name="SP">
                 <RadioButton Content="[Вариант 1]" 
-                                            Background="Transparent"
-                                 Name="RBtnOne"/>
+                             Background="Transparent"
+                             Name="RBtnOne"/>
                 <RadioButton Background="Transparent"
-                                            Content="[Вариант 2]"
-                                 Name="RBtnTwo"/>
+                             Content="[Вариант 2]"
+                             Name="RBtnTwo"/>
+                <RadioButton Background="Transparent"                                      Content="[Вариант 3]"
+                             Name="RBtnThree"/>
                 <RadioButton Background="Transparent"
-                                            Content="[Вариант 3]"
-                                 Name="RBtnThree"/>
-                <RadioButton Background="Transparent"
-                                            Content="[Вариант 4]"
-                                 Name="RBtnFour"/>
+                             Content="[Вариант 4]"
+                             Name="RBtnFour"/>
             </StackPanel>
         </StackPanel>
         <Button Name="BtnAnswer" 

@@ -33,9 +33,10 @@ namespace TestProg.Pages
                 var user = ODBClass.entities.User.FirstOrDefault(x => x.Login == NameTextBox.Text && x.Password == PasswordBox.Password);
                 if (user != null)
                 {
+                    QuestionClass.iduser = user.id;
                     GlavnWin win = new GlavnWin(user);
                     win.Show();
-                    
+
                 }
                 else { MessageBox.Show("Что-то пошло не так. Повторите попытку."); }
 

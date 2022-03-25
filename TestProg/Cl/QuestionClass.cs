@@ -15,5 +15,8 @@ namespace TestProg.Cl
         {
             quesions = ODBClass.entities.BankQuesions.Where(x => x.idTheme == id).ToList();
         }
+
+        public static int iduser {get; set;}
+
     }
 }

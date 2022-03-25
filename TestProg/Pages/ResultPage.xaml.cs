@@ -21,10 +21,12 @@ namespace TestProg.Pages
     /// </summary>
     public partial class ResultPage : Page
     {
-        public ResultPage(int id)
+        public ResultPage(int count)
         {
             InitializeComponent();
-            TbTheme.Text = ODBClass.entities.Theme.FirstOrDefault(x => x.id == id).ThemeName;
+            TbTheme.Text = QuestionClass.quesions.Select(x => x.Theme.ThemeName).FirstOrDefault().ToString();
+            TbResult.Text = $"Вы набрали: {count}";
+            
         }
     }
 }

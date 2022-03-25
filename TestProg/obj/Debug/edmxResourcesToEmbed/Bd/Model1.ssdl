@@ -41,8 +41,9 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idUser" Type="int" Nullable="false" />
-    <Property Name="idBankQuestions" Type="int" Nullable="false" />
+    <Property Name="IdTheme" Type="int" Nullable="false" />
     <Property Name="ImageResult" Type="nvarchar(max)" />
+    <Property Name="Count" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -107,15 +108,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Result_BankQuesions">
-    <End Role="BankQuesions" Type="Self.BankQuesions" Multiplicity="1" />
+  <Association Name="FK_Result_Theme">
+    <End Role="Theme" Type="Self.Theme" Multiplicity="1" />
     <End Role="Result" Type="Self.Result" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="BankQuesions">
+      <Principal Role="Theme">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Result">
-        <PropertyRef Name="idBankQuestions" />
+        <PropertyRef Name="IdTheme" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -164,8 +165,8 @@
       <End Role="Theme" EntitySet="Theme" />
       <End Role="BankQuesions" EntitySet="BankQuesions" />
     </AssociationSet>
-    <AssociationSet Name="FK_Result_BankQuesions" Association="Self.FK_Result_BankQuesions">
-      <End Role="BankQuesions" EntitySet="BankQuesions" />
+    <AssociationSet Name="FK_Result_Theme" Association="Self.FK_Result_Theme">
+      <End Role="Theme" EntitySet="Theme" />
       <End Role="Result" EntitySet="Result" />
     </AssociationSet>
     <AssociationSet Name="FK_Result_User" Association="Self.FK_Result_User">

@@ -40,27 +40,50 @@ namespace TestProg.Pages
 
         private void QuestionCreate(int? questnum)
         {
-            if (questnum == 0)
+            try
             {
-                countQuest = 0;
-            }
+                if (questnum == 0)
+                {
+                    countQuest = 0;
+                }
 
-            if (_count == QuestionClass.quesions.Count())
-            {
-                DataHelper.frameQuest.Navigate(new ResultPage());
-                MessageBox.Show("Вы набрали " + countQuest);
-                //Application.Current.Shutdown();
-                return;
+                if (_count == QuestionClass.quesions.Count())
+                {
+                    Result result = new Result()
+                    {
+                       idUser = QuestionClass.iduser,
+                       IdTheme = QuestionClass.quesions.Select(x=>x.idTheme).First(),
+                       Count = countQuest
+                    };
+                    ODBClass.entities.Result.Add(result);
+                    ODBClass.entities.SaveChanges();
+                    DataHelper.frameQuest.Navigate(new ResultPage(countQuest));
+                    //MessageBox.Show("Вы набрали " + countQuest);
+                    //Application.Current.Shutdown();
+                    return;
+                }
+
+                var quest = QuestionClass.quesions.ElementAt((int)questnum);
+                TbTheme.Text = quest.Theme.ThemeName;
+                PBQuestion.Value = (double)questnum;
+                TbQuestion.Tag = quest.Question.AnswerName;
+                TbQuestion.Text = quest.Question.QuestionName;
+                RBtnOne.Content = quest.VariantsOne;
+                RBtnTwo.Content = quest.VariantsTwo;
+                RBtnThree.Content = quest.VariantsThree;
+                RBtnFour.Content = quest.VariantsFour;
+                TbQuestionCount.Text = $"{_count+1} из {QuestionClass.quesions.Count()}";
+                RBtnOne.IsChecked = false;
+                RBtnTwo.IsChecked = false;
+                RBtnThree.IsChecked = false;
+                RBtnFour.IsChecked = false;
+
             }
-            var quest = QuestionClass.quesions.ElementAt((int)questnum);
-            PBQuestion.Value = (double)questnum;
-            TbQuestion.Tag = quest.Question.AnswerName;
-            TbQuestion.Text = quest.Question.QuestionName;
-            RBtnOne.Content = quest.VariantsOne;
-            RBtnTwo.Content = quest.VariantsTwo;
-            RBtnThree.Content = quest.VariantsThree;
-            RBtnFour.Content = quest.VariantsFour;
-            TbQuestionCount.Text = $"{_count+1} из {QuestionClass.quesions.Count()}";
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибочка");
+                throw;
+            }
         }
         private void BtnAnswer_Click(object sender, RoutedEventArgs e)
         {
