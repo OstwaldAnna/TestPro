@@ -25,12 +25,12 @@
                     Margin="10">
             <TextBlock Text="Ваши результаты:"
                        FontSize="20"/>
-            <Image 
+            <Image Source="/Resurs/Res.png"
+               Margin="158,20,135,20"
                Stretch="UniformToFill"
                Name="ImResult"
-               Width="250"
-               Height="250"/>
-        <TextBlock
+               Height="265"/>
+            <TextBlock
             Name="TbResult"
             Text="[текст]" 
             HorizontalAlignment="Center"

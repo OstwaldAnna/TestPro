@@ -485,3 +485,5 @@ E:\TestPro-main\TestProg\obj\Debug\TestProg.csproj.CoreCompileInputs.cache
 E:\TestPro-main\TestProg\obj\Debug\TestProg.csproj.CopyComplete
 E:\TestPro-main\TestProg\obj\Debug\TestProg.exe
 E:\TestPro-main\TestProg\obj\Debug\TestProg.pdb
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Asya\Documents\GitHub\Mob\TestProg\obj\Debug\Pages\ResultPage.baml

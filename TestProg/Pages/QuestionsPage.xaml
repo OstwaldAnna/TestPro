@@ -19,7 +19,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/TestProg;component/Resurs/fff.jpg"/>
         </Grid.Background>
-        <TextBlock Text="[ТЕМА]" Name="TbTheme"
+        <TextBlock  Name="TbTheme"
                    Margin="10"
                    FontSize="15"/>
         <TextBlock Text="0 из 0" 
@@ -44,21 +44,19 @@
                         HorizontalAlignment="Center"
                         Margin="15"
                         Width="450">
-            <TextBlock Text="Что будет если смешать колу и ментос?"
+            <TextBlock 
                                     Name="TbQuestion"
                                     FontSize="22"
                                     TextWrapping="Wrap"/>
             <StackPanel Margin="10" Name="SP">
-                <RadioButton Content="[Вариант 1]" 
+                <RadioButton 
                              Background="Transparent"
                              Name="RBtnOne"/>
                 <RadioButton Background="Transparent"
-                             Content="[Вариант 2]"
                              Name="RBtnTwo"/>
-                <RadioButton Background="Transparent"                                      Content="[Вариант 3]"
+                <RadioButton Background="Transparent"                                      
                              Name="RBtnThree"/>
                 <RadioButton Background="Transparent"
-                             Content="[Вариант 4]"
                              Name="RBtnFour"/>
             </StackPanel>
         </StackPanel>

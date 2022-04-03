@@ -109,8 +109,7 @@
                                  IsEnabled="{Binding DataContext.ControlsEnabled, 
                             RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" 
                                  Foreground="#FF1E1E1E"
-                                 HorizontalContentAlignment="Left"
-                         />
+                                 HorizontalContentAlignment="Left"/>
 
 
                 <!--</StackPanel>
